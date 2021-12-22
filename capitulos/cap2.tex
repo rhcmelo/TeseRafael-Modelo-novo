@@ -128,21 +128,65 @@ O \textit{Phantom Premium} ® (Figura~\ref{fig:hapticoPremium}) está disponíve
 
 \section{Modelagem de tecidos}
 
-Um dos passos necessários para construção de um ambiente virtual para treinamento de anestesia epidural e raquianestesia é a criação de pacientes virtuais. Um importante aspecto da modelagem destes pacientes é como eles aparecem na tela da aplicação. Outro aspecto importante na simulação é ter uma estimativa da espessura dos tecidos envolvidos nestes tipos de anestesia. Para isto é necessária à modelagem do tamanho de todas as camadas de tecido pelos quais as agulhas passam para execução destes procedimentos. Uma ilustração destes tecidos que vão desde a pele até a dura-máter pode ser vista na Figura 3. Nesta seção são descritos trabalhos relacionados com a modelagem da distância entre a pele e a dura-máter.
+Um dos passos necessários para construção de um ambiente virtual para treinamento de raquianestesia é a criação de pacientes virtuais. Um importante aspecto da modelagem destes pacientes é como eles aparecem na tela da aplicação. Outro aspecto importante na simulação é ter uma estimativa da espessura dos tecidos envolvidos nestes tipos de anestesia. Para isto é necessária à modelagem do tamanho de todas as camadas de tecido pelos quais as agulhas passam para execução destes procedimentos. Uma ilustração destes tecidos que vão desde a pele até o espaço subaracnóide (onde deve ser aplicada a anestesia) pode ser vista na Figura~\ref{fig:camadasPuncaoLombar}. Nesta seção são descritos trabalhos relacionados com a modelagem da distância entre a pele e a dura-máter que é a camada imediatamente anterior ao espaço subaracnóide.
 
-Na Tabela 2 são listadas as varáveis de entrada e saída dos métodos estudados nesta seção. Esta tabela exibe também as unidades destas variáveis que serão utilizadas em todo este trabalho.
+\begin{table}[!ht]
+\begin{center}
+\caption{Variáveis e unidades de medida utilizadas no texto.}
+\label{tab:variaveisUnidades}
+\begin{tabular}{|p{0.53\linewidth}|p{0.25\linewidth}|p{0.13\linewidth}|}
+\hline
+\textbf{Váriavel (sigla) - fórmula} & \textbf{Unidade} & \textbf{Unidade abreviada}\\
+\hline\hline
+Massa (M) & quilogramas & kg \\
+Altura (A) & metros & m \\
+Idade (I) & anos & - \\
+\acrfull{IMC} - M/A\textasciicircum{}2 & quilogramas/metros\textasciicircum{}2 & kg/m\textasciicircum{}2 \\
+\acrfull{DEE} & centímetros & cm \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
-===== TABELA ====
+Na Tabela~\ref{tab:variaveisUnidades} são listadas as varáveis de entrada e saída dos métodos estudados nesta seção. Esta tabela exibe também as unidades destas variáveis que serão utilizadas em todo este trabalho.
 
-Muitos trabalhos buscam relacionar a distância que vai da superfície externa da pele até o espaço epidural (DEE) com as demais variáveis da Tabela 2. A grande maioria dos trabalhos indica uma forte relação da DEE com o IMC \cite{Adegboye2017, Galbraith2018}. Estes dois trabalhos não fazem separação dos grupos populacionais por idade, sexo ou etnia, e usaram populações respectivamente de n=120 e n=317 pessoas entre homens e mulheres.
+Muitos trabalhos buscam relacionar a \acrfull{DEE} com as demais variáveis da Tabela~\ref{tab:variaveisUnidades}. A grande maioria dos trabalhos indica uma forte relação da \acrshort{DEE} com o \acrshort{IMC} \cite{Adegboye2017, Galbraith2018}. Estes dois trabalhos não fazem separação dos grupos populacionais por idade, sexo ou etnia, e usaram populações respectivamente de n=120 e n=317 pessoas entre homens e mulheres.
 
-Os trabalhos citados a seguir analisaram somente ou de forma separada grupos de mulheres grávidas. Como este é o foco deste trabalho só serão comentadas aqui as conclusões referentes a estes grupos. Todos os trabalhos a seguir encontraram influencia do IMC na determinação da DEE, mas além desta relação também foram encontradas outras combinações em cada trabalho. O grupo étnico/populacional do individuo foi observado em conjunto com o IMC em \cite{Sharma2011} estudo feito no Reino Unido. A idade foi observada em conjunto com o IMC num estudo em pacientes americanas em Michigan, EUA \cite{Clinkscales2007}. A altura, massa, idade e IMC foram observados como relevantes em um estudo em pacientes da Índia \cite{Hazarika2016}. Estes dois últimos trabalhos construíram equações de regressão linear para determinação da DEE para grupos de parturientes conforme pode ser visto na Tabela 3.
+Os trabalhos citados a seguir analisaram somente ou de forma separada grupos de mulheres grávidas. Como este é o foco deste trabalho só serão comentadas aqui as conclusões referentes a estes grupos. Todos os trabalhos a seguir encontraram influencia do \acrshort{IMC} na determinação da \acrshort{DEE}, mas além desta relação também foram encontradas outras combinações em cada trabalho. O grupo étnico/populacional do individuo foi observado em conjunto com o \acrshort{IMC} em \cite{Sharma2011} estudo feito no \acrfull{RU}. A idade foi observada em conjunto com o \acrshort{IMC} num estudo em pacientes americanas em Michigan, EUA \cite{Clinkscales2007}. A altura, massa, idade e \acrshort{IMC} foram observados como relevantes em um estudo em pacientes da Índia \cite{Hazarika2016}. Estes dois últimos trabalhos construíram equações de regressão linear para determinação da \acrshort{DEE} para grupos de parturientes conforme pode ser visto na Tabela~\ref{tab:equacoesEstimativaDEE}.
 
-===== TABELA ====
+\begin{table}[!ht]
+\begin{center}
+\caption{Equações para estimativa da DEE em grávidas.}
+\label{tab:equacoesEstimativaDEE}
+\begin{tabular}{|p{0.27\linewidth}|p{0.55\linewidth}|p{0.105\linewidth}|}
+\hline
+\textbf{Trabalho} & \textbf{Equação} & \textbf{Local da amostra}\\
+\hline\hline
+\cite{Clinkscales2007} & DEE = 3 + 0,11 IMC - 0,01 I & EUA \\
+\cite{Hazarika2016} & DEE = 4,748 + 0,209 IMC + 4,703 A - 0,054 M & Índia \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
-Os autores em \cite{Sharma2011} no lugar das equações apresentaram como resultado uma tabela com cinco pontos de cada par IMC x DEE para cada grupo populacional analisado. Estes dados podem ser vistos na Tabela 4. A definição dos grupos populacionais no estudo do Reino Unido (RU) em \cite{Sharma2011} foi: Brancas (população do Reino Unido, da Irlanda e qualquer outro grupo com cor de pele branca); Asiáticas ou Britânicas Asiáticas (população da Índia, Paquistão, Bangladesh ou qualquer outro grupo Asiático); Negras ou Britânicas negras (população de Africanas, Caribenhas ou outros grupos com cor da pele negra); e Chinesas e outros grupos étnicos (população da China, Japão, Malásia, Filipinas etc.). No grupo de nome Chinesas, além dos dados de pessoas desta origem moradoras do Reino Unido, foram considerados dados de Chinesas (n=70) de um hospital de Singapura.
+Os autores em \cite{Sharma2011} no lugar das equações apresentaram como resultado uma tabela com cinco pontos de cada par \acrshort{IMC} x \acrshort{DEE} para cada grupo populacional analisado. Estes dados podem ser vistos na Tabela~\ref{tab:DEEEstimadosSharma}. A definição dos grupos populacionais no estudo do \acrshort{RU} em \cite{Sharma2011} foi: Brancas (população do \acrlong{RU}, da Irlanda e qualquer outro grupo com cor de pele branca); Asiáticas ou Britânicas Asiáticas (população da Índia, Paquistão, Bangladesh ou qualquer outro grupo Asiático); Negras ou Britânicas negras (população de Africanas, Caribenhas ou outros grupos com cor da pele negra); e Chinesas e outros grupos étnicos (população da China, Japão, Malásia, Filipinas etc.). No grupo de nome Chinesas, além dos dados de pessoas desta origem moradoras do \acrshort{RU}, foram considerados dados de Chinesas (n=70) de um hospital de Singapura.
 
-===== TABELA ====
+\begin{table}[!ht]
+\begin{center}
+\caption{DEE estimados para os grupos populacionais de \cite{Sharma2011}.}
+\label{tab:DEEEstimadosSharma}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{IMC (kg/m\textasciicircum{}2)}} & \multicolumn{4}{l}{\textbf{DEE estimada (cm)}} \\
+\hline\
+                                               & \textbf{Brancas} & \textbf{Asiáticas/Britânicas Asiáticas} & \textbf{Negras/Britânicas negras} & \textbf{Chinesas} \\
+\hline\hline
+20 & 4,7 & 4,5  & 5,  & 4,4 \\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 Na Tabela 5 é apresentado o tamanho da população utilizada nestes estudos e as identificações da origem dos dados do estudo, isto é, os grupos populacionais analisados. 
 
