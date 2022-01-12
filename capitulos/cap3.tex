@@ -74,7 +74,7 @@ A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de caracterí
 
 \begin{table}[!ht]
 \begin{center}
-\caption{Comparação dos simuladores epidurais baseados em phantoms..}
+\caption{Comparação dos simuladores epidurais baseados em phantoms.}
 \label{tab:comparacaoSimuladoresPhantoms}
 %\begin{tabular}{|p{0.27\linewidth}|p{0.55\linewidth}|p{0.105\linewidth}|}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -167,6 +167,45 @@ Um simulador de punção lombar criado por \cite{Farber2008,Farber2009} possui a
     \caption{Uso do simulador \cite{Farber2009} demonstrando os dispositivos utilizados.}
     \label{fig:farberSimDispositivos}
 \end{figure}
+
+O \textit{Epidural Haptic Game Simulator}, EHGS \cite{Brazil2017}, fez uso de dispositivo háptico e elementos de jogos para trazer mais motivação para os usuários. Dentre os elementos de jogos estão presentes a divisão de etapas e atribuição de pontuação pelo correto cumprimento destas no procedimento de punção epidural. A simulação da técnica de LOR foi feita através da exibição de valores na tela ao clicar sobre um botão do háptico simulando o pressionamento do êmbolo da seringa. É possível escolher o ponto e ângulo de inserção da agulha. Não existe a opção de palpação da coluna para descoberta do local correto para efetuação da punção. Foi implementado um modelo de cálculo da espessura dos tecidos conforme peso, altura e idade do paciente de acordo com estudos em parturientes. A modelagem de forças de rigidez, atrito e corte necessárias para inserção e progresso da agulha nos tecidos foi desenvolvida com base em estudos destas forças para inserção de agulhas em tecidos de porcos e humanos. A ferramenta também disponibiliza uma forma manual de alteração destes parâmetros permitindo assim uma customização destas forças segundo as sensações do especialista. A Figura \ref{fig:brasilSimulator} mostra a interface do simulador EHGS em detalhes com o retorno de pontos obtidos, o tecido sendo perfurado no momento, a profundidade da ponta da agulha, as forças medidas e ângulo da agulha.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{capitulos/figuras/brasilSimulator.png} 
+    \caption{Interface do simulador EHGS \cite{Brazil2017}.}
+    \label{fig:brasilSimulator}
+\end{figure}
+
+Um resumo das características importantes nos simuladores epidurais computacionais pode ser vista na Tabela \ref{tab:comparacaoSimuladoresComputacionais}.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Comparação dos simuladores computacionais.}
+\label{tab:comparacaoSimuladoresComputacionais}
+%\begin{tabular}{|p{0.27\linewidth}|p{0.55\linewidth}|p{0.105\linewidth}|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+  & 
+  \rotatebox{90}{Ano de desenvolvimento} & 
+  \rotatebox{90}{Realidade virtual} & 
+  \rotatebox{90}{Epidural (E) Raquianestesia (R)} & 
+  \rotatebox{90}{Feedback de forças} & 
+  \rotatebox{90}{Testado em hospital} & 
+  \rotatebox{90}{Baseado em dados medidos} & 
+  \rotatebox{90}{Variabilidade de pacientes} & 
+  \rotatebox{90}{Feedback para o usuário} & 
+  \rotatebox{90}{Coluna palpável} & 
+  \rotatebox{90}{Escolha do ponto de inserção da agulha }  & 
+  \rotatebox{90}{Abordagens mediana e paramediana} \\
+\hline\hline
+ Epidural Sim & 1995 & 3D & E & Sim & OK & {\begin{tabular}[c]{@{}c@{}}Porcos e\\cães\end{tabular}} & Múltiplas &  &  & OK & OK \\
+ {\begin{tabular}[c]{@{}c@{}}Epidural Injection \\Simulator Profile \\Manager\end{tabular}} & {\begin{tabular}[c]{@{}c@{}}2003\\(1a\\versão)\end{tabular}} &  & E & Customizado &  &  & Múltiplas + salvar para uso posterior & Habilidade rápida;  Gráficos & OK & &  \\
+ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 === CONTINUA ===
 
