@@ -1,0 +1,34 @@
+\chapter{Trabalhos Relacionados} \label{cap:cap3}
+
+%Os trabalhos apresentados neste capítulo vão desde simuladores que usam só \texit{phantoms} a simuladores computacionais. É interessante destacar que alguns simuladores computacionais são híbridos no sentido de que usam \textit{phantoms} como parte do processo de simulação. 
+
+Os trabalhos apresentados neste capítulo vão desde abordagens de simulação de procedimentos de anestesia usando \textit{phantons} passando por simuladores computacionais bem como os diferentes tipos de modelagens de partes do corpo humano usados para simulações médicas.  
+
+\textcite{Vaughan2013} citam trinta e um simuladores (entre computacionais e com uso de \texit{phantoms}). Destes, dezesseis são apenas epidurais, nove que permitem tanto a punção epidural quanto a raquidiana e seis apenas raquidianos. São discutidas as limitações e vantagens de cada um, de forma a identificar características desejáveis para serem incluídas em um simulador \cite{Vaughan2013}. No trabalho de \textcite{Isaacs2015} os autores citam uma pesquisa onde também são elencadas diversas características interessantes para um simulador epidural \cite{Isaacs2015}. Dentre os itens com mais relevância citados por \textcite{Isaacs2015} estão: coluna fisicamente palpável, representação da técnica de perda de resistência (do inglês inglês Lost of Resistence, \acrshort{LOR}) de forma realista (para solução salina e ar), ajuste da posição do paciente, mapeamento de características do paciente (obesidade, gravidez), \texit{feedback} a respeito da correta execução.
+A principal vantagem dos modelos com uso de \texit{phantoms} é a presença física do manequim que representa o paciente. Uma das principais desvantagens é a dificuldade na variabilidade de cenários (pacientes) distintos. Outra desvantagem é a dificuldade na representação da diferença existente entre a resistência dos tecidos biológicos e os tecidos nos quais os modelos físicos são constituídos (usualmente borracha e plástico).
+Os dispositivos hápticos têm melhorado muito ao longo dos últimos anos. Os modelos computacionais com hápticos têm como pontos a favor a versatilidade. As possibilidades computacionais da tecnologia háptica e as visualizações 3D de tempo real são outros pontos positivos associados a esta tecnologia. 
+Soluções computacionais podem criar um modelo de forças de inserção da agulha. Para este fim pode-se usar como base as medições das forças aplicadas para inserção de agulhas em animais considerados próximos dos humanos, assim como em cadáveres e até mesmo voluntários reais \cite{Hiemenz1998, Holton2001,Langton1990,McKay2010,Naemura2009,Tran2009,Vaughan2012}. Estes modelos podem contemplar uma grande variabilidade de cenários através de ajustes de parâmetros. 
+
+A seguir serão apresentados os simuladores de punções mais completos. Primeiro os que somente fazem uso de \textit{phantoms}, em seguida os que usam de ferramentas computacionais.  
+
+\section{Simuladores que só usam \texit{phantoms}} \label{sec:SimuladoresPhantoms}
+
+Os simuladores baseados em \texit{phantoms} (ou manequins) mais completos são listados aqui com suas principais características. As características positivas devem idealmente ser contempladas ou até melhoradas em novos simuladores. Todas as soluções listadas estão disponíveis atualmente. Elas permitem ao menos a simulação da anestesia peridural, possuem a coluna fisicamente palpável e permitem a escolha do ponto e ângulo de inserção da agulha. Todos esses trabalhos permitem que o procedimento seja feito com o paciente sentado ou deitado e o escoamento do fluido cérebro espinhal é simulado ao perfurar a dura-máter. As abordagens mediana e paramediana de inserção de agulha são possíveis em todos estes simuladores.
+
+A solução \texit{SimULab Lumbar Puncture / Epidural} possui até 3 variações de pacientes (normal, idoso e obeso). A Figura \ref{fid:simuladorSimulab} ilustra o uso deste simulador onde na esquerda da imagem está a simulação da inserção da agulha no manequim. Na imagem central o uso do ultrassom e na imagem da direita o escorrimento do líquor. O material deste simulador foi produzido de forma a permitir o uso de ultrassom \cite{SimulabCorporation2008}. 
+
+==== FIGURA ====
+
+=== CONTINUA ===
+
+\subsection {Simuladores computacionais}
+
+Esta seção comenta os simuladores computacionais que possuem as características mais relevantes ao desenvolvimento pretendido.
+
+=== CONTINUA ===
+
+\subsection {Comparação}
+
+Enquanto os simuladores baseados em \textit{phantoms} mais generalistas possibilitam 3 variações de pacientes alguns dos simuladores computacionais mais completos possibilitam infinitas representações de pacientes através de ajustes de parâmetros. Em contrapartida apenas um dos simuladores computacionais desenvolvidos tratou a apalpação física da coluna. Esta é uma característica desejável e importante que está presente em todos os simuladores baseados em \textit{phantoms}. Outra característica muito importante presente na maioria dos modelos baseados em \textit{phantoms} é a escolha do ponto de inserção da agulha e sua angulação. Este fator já está incorporado nos principais simuladores computacionais.
+
+=== CONTINUA ===
