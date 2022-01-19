@@ -152,7 +152,7 @@ O EpiSim \cite{YantricInc2011} foi desenvolvido em 2008. Ele faz uso do háptico
     \label{fig:epiSim}
 \end{figure}
 
-Um simulador de punção lombar criado por \cite{Farber2008,Farber2009} possui além do dispositivo háptico \textit{Phantom Premium} 1.0, gráficos anatômicos e tela estereográfica. Os movimentos de rotação e transversais são restritos quando a agulha está dentro do corpo. As forças hápticas são calculadas a partir de dados segmentados e tomografias. Uma abordagem de processamento de volume háptico \cite{Lundin2005} foi adaptada pelos autores para mapear as tomografias em forças, este método usa os vetores gradientes das imagens para este fim. O paciente virtual 3D é construído a partir de dados de tomografia de pacientes reais e de dados do projeto \textit{Visible Human}. As visualizações incluem uma anatomia 3D e 3 visualizações 2D mostrando os cortes ortogonais (transversal, frontal e sagital). É possível usar uma visão sob a perspectiva da agulha virtual. A Figura \ref{fig:farberSimVisual} ilustra as opções de visualizações citadas, a visão da agulha aparece na parte superior esquerda. A visão pode ser rotacionada e amplificada por meio de zoom. Possui uma boa impressão de profundidade no corpo virtual através da visão estéreo. Possibilita a variação entre 3 opções de pacientes virtuais. Pelas diversas tecnologias envolvidas este simulador tem um custo consideravelmente maior que os demais. Na Figura \ref{fig:farberSimDispositivos} é possível visualizar os dispositivos envolvidos no uso do simulador. Testes num estudo piloto demonstraram que os médicos treinados neste simulador se saíram melhor do que os que não tiveram acesso a ele \cite{Farber2009}. Para estes testes foi utilizada uma população de n=42 dividida em dois grupos de 21.
+Um simulador de punção lombar criado por \textcite{Farber2008}  possui além do dispositivo háptico \textit{Phantom Premium} 1.0, gráficos anatômicos e tela estereográfica. Os movimentos de rotação e transversais são restritos quando a agulha está dentro do corpo. As forças hápticas são calculadas a partir de dados segmentados e tomografias \cite{Farber2008, Farber2009}. Uma abordagem de processamento de volume háptico \cite{Lundin2005} foi adaptada pelos autores para mapear as tomografias em forças, este método usa os vetores gradientes das imagens para este fim. O paciente virtual 3D é construído a partir de dados de tomografia de pacientes reais e de dados do projeto \textit{Visible Human}. As visualizações incluem uma anatomia 3D e 3 visualizações 2D mostrando os cortes ortogonais (transversal, frontal e sagital). É possível usar uma visão sob a perspectiva da agulha virtual. A Figura \ref{fig:farberSimVisual} ilustra as opções de visualizações citadas, a visão da agulha aparece na parte superior esquerda. A visão pode ser rotacionada e amplificada por meio de zoom. Possui uma boa impressão de profundidade no corpo virtual através da visão estéreo. Possibilita a variação entre 3 opções de pacientes virtuais. Pelas diversas tecnologias envolvidas este simulador tem um custo consideravelmente maior que os demais. Na Figura \ref{fig:farberSimDispositivos} é possível visualizar os dispositivos envolvidos no uso do simulador. Testes num estudo piloto demonstraram que os médicos treinados neste simulador se saíram melhor do que os que não tiveram acesso a ele \cite{Farber2009}. Para estes testes foi utilizada uma população de n=42 dividida em dois grupos de 21.
 
 \begin{figure}[ht!]
     \centering
@@ -179,7 +179,7 @@ O \textit{Epidural Haptic Game Simulator}, EHGS \cite{Brazil2017}, fez uso de di
 
 Um resumo das características importantes nos simuladores epidurais computacionais pode ser vista na Tabela \ref{tab:comparacaoSimuladoresComputacionais}.
 
-\begin{table}[!ht]
+\begin{sidewaystable}[!ht]
 \begin{center}
 \caption{Comparação dos simuladores computacionais.}
 \label{tab:comparacaoSimuladoresComputacionais}
@@ -200,14 +200,16 @@ Um resumo das características importantes nos simuladores epidurais computacion
   \rotatebox{90}{Abordagens mediana e paramediana} \\
 \hline\hline
  Epidural Sim & 1995 & 3D & E & Sim & OK & {\begin{tabular}[c]{@{}c@{}}Porcos e\\cães\end{tabular}} & Múltiplas &  &  & OK & OK \\
- {\begin{tabular}[c]{@{}c@{}}Epidural Injection \\Simulator Profile \\Manager\end{tabular}} & {\begin{tabular}[c]{@{}c@{}}2003\\(1a\\versão)\end{tabular}} &  & E & Customizado &  &  & Múltiplas + salvar para uso posterior & Habilidade rápida;  Gráficos & OK & &  \\
- 
+ {\begin{tabular}[c]{@{}c@{}}Epidural Injection \\Simulator Profile \\Manager\end{tabular}} & {\begin{tabular}[c]{@{}c@{}}2003\\(1a\\versão)\end{tabular}} &  & E & Customizado &  &  & {\begin{tabular}[c]{@{}c@{}}Múltiplas + salvar \\para uso posterior\end{tabular}} & {\begin{tabular}[c]{@{}c@{}}Habilidade \\rápida; Gráficos\end{tabular}} & OK & &  \\
+ {\begin{tabular}[c]{@{}c@{}}Mediseus® epidural \\simulator\end{tabular}} & 2006 & 3D & E & Customizado & OK &  & 2 &  &  & &  \\
+ {\begin{tabular}[c]{@{}c@{}}Spinal Anaesthesia \\simulator\end{tabular}} & 2006 & 3D & ER & Phantom &  & TC + RM &  & {\begin{tabular}[c]{@{}c@{}}Conhecimento\\dos níveis de\\dificuldade\end{tabular}} &  & OK & OK  \\
+ EpiSim & 2008 & 3D & E & Phantom &  &  & {\begin{tabular}[c]{@{}c@{}}Múltiplas + salvar\\para uso posterior\end{tabular}} & Gravações &  & & OK \\
+ {\begin{tabular}[c]{@{}c@{}}Simulador de punção  \\lombar de Färber\end{tabular}} & 2009 & 3D & ER & Phantom & OK & TC & 3 & Gravações &  & OK & OK \\
+ EHGS & 2017 & 3D & E & Phantom &  & {\begin{tabular}[c]{@{}c@{}}Porcos e\\humanos\end{tabular}} & Múltiplas & Pontuações &  & OK & OK \\
 \hline
 \end{tabular}
 \end{center}
-\end{table}
-
-=== CONTINUA ===
+\end{sidewaystable}
 
 \subsection {Comparação}
 
