@@ -1,5 +1,12 @@
 \chapter{Proposta} \label{cap:cap4}
 
+A proposta de uso do dispositivo háptico para treinamento de anestesia raquidiana apresentada nesta tese envolve a criação de um simulador que permite o treinamento de aprendizes na técnica de anestesia raquidiana utilizando um ambiente virtual de treinamento.
+Este ambiente virtual foi desenvolvido utilizando o motor de jogo Unity3D com uso de \textit{plugin} para o dispositivo háptico \textit{Geomagic Touch}®, os \textit{scripts} foram desenvolvidos em C#. O código foi desenvolvido como uma evolução do simulador epidural desenvolvido por \textcite{Brazil2017} levando em consideração que diversas funcionalidades existentes foram estendidas e modificadas. O foco passou de anestesia epidural para anestesia raquidiana. Um novo modelo 3D foi construído para representar fielmente as camadas do corpo humano, para isto as formas e volumes das camadas foram baseadas num corpo 3D interativo cientificamente preciso \cite{BioDigitalInc2019}. Adicionalmente a isto as principais camadas foram programadas com um margem de crescimento individual onde o crescimento da camada mais interna "empurra" as camadas mais externas pra fora. Isto foi feito para possibilitar uma maior variabilidade de cenários e para que estes sejam visualmente coerentes quando a transparência das camadas for aplicada. Além da possibilidade de se crescer individualmente cada camada, também é possível que todas as camadas cresçam de forma homogênea através da aplicação de matrizes de transformação. 
+
+Foi incluída uma visão lateral da cena, esta opção foi feita a partir do \textit{feedback} de um anestesista sobre pontos de melhoria da ferramenta. Também foi incluída a possibilidade de mudança de posição da paciente que além da posição sentada agora também permite que o procedimento seja feito com ela deitada (estas são as duas posições em que ocorre) o procedimento de raquianestesia.   
+
+criação do modelo 3D do tronco do corpo feminino (área onde é feita a punção  
+
 \subsection {Desenvolvimento do ambiente de treinamento} 
 
 \subsection {Simulação de pacientes virtuais}
