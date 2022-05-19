@@ -23,18 +23,23 @@ Como comentado anteriormente foram criados controles para crescimento das princi
 
 Para que seja possível fazer a interação com o dispositivo háptico \textit{Geomagic Touch®} o driver \textit{Open Haptics Touch Device} precisa ser instalado na máquina onde o dispositivo será usado, este driver pode ser encontrado no endereço eletrônico da empresa responsável pela produção e comercialização deste dispositivo háptico \cite{3DSystemsTouch2018}. Para que este dispositivo possa ser utilizado na \textit{Unity} optamos pela instalação do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014}. Este \textit{plugin} contém exemplos que exploram as funcionalidades e dos dispositivos hápticos suportados. As características específicas que foram utilizadas nos experimentos são comentadas no capítulo~\ref{cap:cap5}. No ambiente de treinamento utilizamos configurações similares as dos experimentos ajustadas de acordo com cada corpo de paciente sendo simulado. 
 
-Foi incluída uma visão lateral da cena (Figura~\ref{fig:posicaoSentada}) a partir do \textit{feedback} de um anestesista sobre pontos de melhoria da ferramenta de treinamento para possibilitar um outro ponto de vista do procedimento sendo efetuado. Esta característica ajuda não só o indivíduo em treinamento mas também pessoas que possam assistir o treinamento ao vivo ou ainda gravações deste que pode ser disponibilizado futuramente.
+Foi incluída uma visão lateral da cena (Figura~\ref{fig:posicaoSentadaComTransparencia}) a partir do \textit{feedback} de um anestesista sobre pontos de melhoria da ferramenta de treinamento para possibilitar um outro ponto de vista do procedimento sendo efetuado. Esta característica ajuda não só o indivíduo em treinamento mas também pessoas que possam assistir o treinamento ao vivo ou ainda gravações deste que pode ser disponibilizado futuramente. Nesta mesma imagem fizemos também a demonstração da visibilidade das camadas interiores do corpo (que é exibida ao pressionar usando o mouse o botão "visibilidade" no menu do lado esquerdo). Esta funcionalidade pode ser utilizada por iniciantes nos seus primeiros treinamentos.  
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.9\linewidth]{capitulos/figuras/sistema posicao sentada.png} 
+    \includegraphics[width=0.9\linewidth]{capitulos/figuras/sistema posicao sentada com transparencia.png} 
     \caption{Visão geral do sistema com tronco de paciente centralizada na tela na posição sentada. Do lado inferior direito a visão lateral desta mesma parte do corpo.}
-    \label{fig:posicaoSentada}
+    \label{fig:posicaoSentadaComTransparencia}
 \end{figure}
 
-Uma outra opção de execução do procedimento incluída foi a possibilidade de mudança de posição da paciente que além da posição sentada (original e mais comum) agora também permite que o procedimento seja feito com ela deitada (estas são as duas posições em que ocorre o procedimento de raquianestesia \ref{sec:anestesiaRaquidiana}).
+Uma outra opção de execução do procedimento incluída foi a possibilidade de mudança de posição da paciente (Figura~\ref{fig:posicaoDeitada}) que além da posição sentada (original e mais comum) agora também permite que o procedimento seja feito com ela deitada (estas são as duas posições em que ocorre o procedimento de raquianestesia \ref{sec:anestesiaRaquidiana}).
 
-== MOSTRAR POSIÇÃO DEITADA ==
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{capitulos/figuras/sistema posicao deitada.png} 
+    \caption{Visão geral do sistema com tronco de paciente na posição deitada.}
+    \label{fig:posicaoDeitada}
+\end{figure}
 
 \subsection {Simulação de pacientes virtuais}
 
