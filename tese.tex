@@ -57,6 +57,31 @@
 %Tabela Colorida
 \usepackage{bigdelim,booktabs, colortbl, longtable, multirow, multicol,rotating }
 
+%--- listagem de código
+\usepackage{listings}
+%\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
+%\lstset{style=sharpc}
+
+\usepackage{comment}
+%\begin{comment}
+\definecolor{MyLightGray}{RGB}{200, 200,200}
+
+\lstdefinelanguage{sharpc}
+{
+    columns=fullflexible,
+    keywordstyle=\color{red},
+    morekeywords={@prefix,@base,@forSome,@forAll,@keywords},
+    morecomment=[l]{\#},
+    tabsize=4, 
+    alsoletter={-?}, % allowed in names
+    morecomment=[s][\color{blue}]{<}{>},
+    basicstyle=\ttfamily\color{black}, 
+    %numberstyle=\color{black},
+    morestring=[b][\color{black}]\",    
+    backgroundcolor=\color{MyLightGray},
+}
+%\end{comment}
+
 
 
 %%===============================================================================
