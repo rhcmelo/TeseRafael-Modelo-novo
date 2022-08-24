@@ -66,7 +66,34 @@ Chinesas & DEE = 3,08 + 0,07 IMC\\
 \end{center}
 \end{table}
 
-Os dados brutos de cada população dos três trabalhos analisados não foram disponibilizados publicamente. Com isto a abordagem que adotamos foi a de gerar dados populacionais a partir das equações disponibilizadas em cada trabalho e das equações geradas e apresentadas na Tabela~\ref{tab:DEEEquacoesMinimosQuadrados}. Geramos então primeiramente duzentas amostras para simular as pacientes com valores aleatórios para as variáveis de cada equação (massa, altura e idade). Os valores mínimos e máximos assumidos para cada variável foram de cinquenta a setenta (50 a 70) para massa em kg, um metro e quarenta até um metro e noventa para altura em metros (1,4 até 1,9) e dezoito até quarenta para idade em anos (18 até 40). Os valores de massa e altura foram utilizados para que fossem contemplados indivíduos com baixo peso, peso médio, sobrepeso e obesidade com base na \textit{Pregnancy Weight Gain Calculator} (Calculadora de ganho de peso na gravidez) \cite{MTILLC2019}. Pra idade mínima levamos em conta a definição de maioridade civil e para a idade máxima escolhemos baseados no aumento do risco de gravidez acima da idade escolhida. A quarta variável, \acrshort{IMC}, foi calculada usando a equação padrão da massa em kg dividida pelo quadrado da altura em metros. Considerando que cada equação nas Tabelas~\ref{tab:equacoesEstimativaDEE} e \ref{tab:DEEEquacoesMinimosQuadrados} representam corretamente as populações o resultado da \acrshort{DEE} estimada corresponde ao dado de cada indivíduo das populações representadas pelas seis equações.
+Os dados brutos de cada população dos três trabalhos analisados não foram disponibilizados publicamente. Com isto a abordagem que adotamos foi a de gerar dados populacionais a partir das equações disponibilizadas em cada trabalho e das equações geradas e apresentadas na Tabela~\ref{tab:DEEEquacoesMinimosQuadrados}. Geramos então primeiramente duzentas amostras para simular as pacientes com valores aleatórios para as variáveis de cada equação (massa, altura e idade). Os valores mínimos e máximos assumidos para cada variável foram de cinquenta a setenta (50 a 70) para massa em kg, um metro e quarenta até um metro e noventa para altura em metros (1,4 até 1,9) e dezoito até quarenta para idade em anos (18 até 40). Os valores de massa e altura foram utilizados para que fossem contemplados indivíduos com baixo peso, peso médio, sobrepeso e obesidade com base na \textit{Pregnancy Weight Gain Calculator} (Calculadora de ganho de peso na gravidez) \cite{MTILLC2019}. Pra idade mínima levamos em conta a definição de maioridade civil e para a idade máxima escolhemos baseados no aumento do risco de gravidez acima da idade escolhida. A quarta variável, \acrshort{IMC}, foi calculada usando a equação padrão da massa em kg dividida pelo quadrado da altura em metros. 
+A Tabela~\ref{tab:DadosPopulacaoGerada} descreve a média e o desvio padrão das três características dos pacientes que foram geradas aleatoriamente para criar os dados populacionais assim como o \acrshort{IMC} calculado a partir destas três variáveis. 
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Dados populacionais gerados aleatoriamente.}
+\label{tab:DadosPopulacaoGerada}
+\begin{tabular}{|p{0.3\linewidth}|p{0.2\linewidth}|p{0.3\linewidth}|}
+\hline
+\textbf{Caractrerística} & \textbf{Média} & \textbf{Desvio Padrão}\\
+\hline\hline
+Idade (anos) & 28,70 & 6,58\\
+Altura (m) & 1,65 & 0,15\\
+Massa (kg) & 68,97 & 11,80\\
+IMC (kg/m^2) & 25.84 & 6,55\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Considerando que cada equação nas Tabelas~\ref{tab:equacoesEstimativaDEE} e \ref{tab:DEEEquacoesMinimosQuadrados} representam corretamente as populações o resultado da \acrshort{DEE} estimada corresponde ao dado de cada indivíduo das populações dos grupos representados pelas seis equações. Detalhamos então na Figura~\ref{fig:mediaDesvioPadraoPopulacoes}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{capitulos/figuras/Media e desvio padrao dos grupos.png} 
+    \caption{Média e desvio padrão da \acrshort{DEE} estimada pras populações de cada grupo de grávidas indicando o local de onde as amostras foram feitas.}
+    \label{fig:mediaDesvioPadraoPopulacoes}
+\end{figure}
 
 ================================== artigo Anesthesua 1006 =====
 Estimating population dat - Tabela 2
