@@ -44,6 +44,10 @@ Uma outra opção de execução do procedimento incluída foi a possibilidade de
 \subsection {Simulação de pacientes virtuais} 
 \label{sec:SimulacaoPacientesVirtuais}
 
+Um dos benefícios da criação de ambientes virtuais para treinamento é a possibilidade de se ter uma quantidade muito grande de casos para o treinamento. Estas possibilidades estão limitadas somente pela abrangência do modelo para criação de pacientes virtuais. Conforme descrito anteriormente para esta tese foi criado e utilizado um modelo dinâmico para geração de pacientes do sexo feminino grávidas. A variação física externamente visível das pacientes é função da altura e massa corpórea. Para as camadas internas envolvidas na anestesia raquidiana a \acrlong{DEE} (\acrshort{DEE}) também entra nessa conta para uma representação mais real da distância entre estas camadas conforme descrito na seção \ref{sec:modelagemTecidos}. 
+
+============================================
+
 Iniciamos esta seção descrevendo como fizemos o uso dos dados e equações de populações locais descritas por \textcite{Clinkscales2007, Sharma2011, Hazarika2016} para a modelagem de uma equação mais geral na determinação da \acrshort{DEE}. A abordagem que detalharemos aqui foi uma das duas abordagens descritas em trabalho publicado por nós \cite{Melo2020}.
 Como os dados brutos das populações dos três trabalhos analisados não foram disponibilizados publicamente, utilizamos os dados das equações disponibilizadas para gerar pacientes representativos de cada população.
 
@@ -75,7 +79,7 @@ A Tabela~\ref{tab:DadosPopulacaoGerada} descreve a média e o desvio padrão das
 \label{tab:DadosPopulacaoGerada}
 \begin{tabular}{|p{0.3\linewidth}|p{0.2\linewidth}|p{0.3\linewidth}|}
 \hline
-\textbf{Caractrerística} & \textbf{Média} & \textbf{Desvio Padrão}\\
+\textbf{Característica} & \textbf{Média} & \textbf{Desvio Padrão}\\
 \hline\hline
 Idade (anos) & 28,70 & 6,58\\
 Altura (m) & 1,65 & 0,15\\
@@ -86,12 +90,12 @@ IMC (kg/m^2) & 25.84 & 6,55\\
 \end{center}
 \end{table}
 
-Considerando que cada equação nas Tabelas~\ref{tab:equacoesEstimativaDEE} e \ref{tab:DEEEquacoesMinimosQuadrados} representam corretamente as populações o resultado da \acrshort{DEE} estimada corresponde ao dado de cada indivíduo das populações dos grupos representados pelas seis equações. Detalhamos então na Figura~\ref{fig:mediaDesvioPadraoPopulacoes}
+Considerando que cada equação nas Tabelas~\ref{tab:equacoesEstimativaDEE} e \ref{tab:DEEEquacoesMinimosQuadrados} representam corretamente as populações o resultado da \acrshort{DEE} estimada corresponde ao dado de cada indivíduo das populações dos grupos representados pelas seis equações. Detalhamos então na Figura~\ref{fig:mediaDesvioPadraoPopulacoes} as médias e desvios padrões da \acrshort{DEE} calculada para cada indivíduo sinteticamente gerado a partir das equações destas tabelas. No gráfico desta figura cada grupo é identificado pelo local de onde  foram feitos os estudos que geraram as equações ou os dados que embasaram as equações para produção das amostras sintéticas assim como pelos grupos nos quais cada estudo separou seus dados.
 
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.9\linewidth]{capitulos/figuras/Media e desvio padrao dos grupos.png} 
-    \caption{Média e desvio padrão da \acrshort{DEE} estimada pras populações de cada grupo de grávidas indicando o local de onde as amostras foram feitas.}
+    \caption{Média e desvio padrão da \acrshort{DEE} estimada pras populações de cada grupo de grávidas separadas pelo local dos estudos e grupos distintos }
     \label{fig:mediaDesvioPadraoPopulacoes}
 \end{figure}
 
