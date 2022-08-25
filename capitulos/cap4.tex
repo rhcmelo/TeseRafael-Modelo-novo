@@ -49,7 +49,7 @@ Um dos benefícios da criação de ambientes virtuais para treinamento é a poss
 Descrevemos aqui como fizemos o uso dos dados e equações de populações locais descritas por \textcite{Clinkscales2007, Sharma2011, Hazarika2016} para a modelagem de uma equação genérica na determinação da \acrshort{DEE} buscando representar todos os grupos populacionais da Tabela~\ref{tab:PopulacaoPorEstudo}.
 A abordagem que detalharemos aqui foi descrita em trabalho publicado por nós \cite{Melo2020}.
 
-\textcite{Sharma2011} ao invés das equações apresentaram cinco pontos contendo a \acrshort{DEE} o \acrshort{IMC} representando cada população, optamos então por utilizar o método dos mínimos quadrados para obter as equações de cada grupo através do melhor ajuste de curva que representasse cada um dos quatro grupos da Tabela~\ref{tab:DEEEstimadosSharma}. Para cada ponto consideramos o eixo X como \acrshort{IMC} e o eixo Y como a \acrshort{DEE}. As equações resultado para cada grupo desta tabela que minimiza a soma do quadrado das diferenças para cada ponto está descrito nas equações presentes na Tabela~\ref{tab:DEEEquacoesMinimosQuadrados}.
+\textcite{Sharma2011} ao invés das equações apresentaram cinco pontos contendo a \acrshort{DEE} o \acrshort{IMC} representando cada população, optamos então por utilizar o método dos mínimos quadrados para obter as equações de cada grupo através do melhor ajuste de curva que representasse cada um dos quatro grupos da Tabela~\ref{tab:DEEEstimadosSharma}. Para cada ponto consideramos o eixo X como \acrshort{IMC} e o eixo Y como a \acrshort{DEE}. As equações resultado para cada grupo desta tabela que minimiza a soma do quadrado das diferenças para cada ponto está descrito nas equações presentes na Tabela~\ref{tab:DEEEquacoesMinimosQuadrados}. Os nomes dos grupos na tabela estão renomeados para como iremos nos referenciar a cada grupo no restante desta tese.
 
 \begin{table}[!ht]
 \begin{center}
@@ -59,10 +59,10 @@ A abordagem que detalharemos aqui foi descrita em trabalho publicado por nós \c
 \hline
 \textbf{Grupo} & \textbf{Equação}\\
 \hline\hline
-Brancas & DEE = 2,18 + 0,13 IMC\\
-Asiáticas/Britânicas Asiáticas & DEE = 2,24 + 0,11 IMC\\
-Negras/Britânicas negras & DEE = 1,98 + 0,15 IMC\\
-Chinesas & DEE = 3,08 + 0,07 IMC\\
+RU - Brancas & DEE = 2,18 + 0,13 IMC\\
+RU - Asiáticas & DEE = 2,24 + 0,11 IMC\\
+RU - Negras & DEE = 1,98 + 0,15 IMC\\
+RU - Chinesas & DEE = 3,08 + 0,07 IMC\\
 \hline
 \end{tabular}
 \end{center}
@@ -92,16 +92,28 @@ Usando os dados populacionais como entrada calculamos o \acrshort{DEE} das duzen
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.9\linewidth]{capitulos/figuras/Media e desvio padrao dos grupos.png} 
-    \caption{Média e desvio padrão da \acrshort{DEE} estimada pras populações de cada grupo de grávidas separadas pelo local dos estudos e grupos distintos }
+    \caption{Média e desvio padrão da \acrshort{DEE} estimada pras populações de cada grupo de grávidas separadas pelo local dos estudos e grupos distintos.}
     \label{fig:mediaDesvioPadraoPopulacoes}
 \end{figure}
 
-Para determinação de uma equação geral foram considerados os dados de todos os indivíduos em um grande conjunto. Desconsideramos os grupos populacionais e utilizamos os dados de todos os seis grupos como entrada de um método de regressão multilinear. A amostra populacional randômica é de n=200 (número de indivíduos em cada grupo), considerando os 6 grupos tem-se então uma população para esta abordagem de n=1200. A influência de todas as variáveis independentes foi testada em relação à \acrshort{DEE} no modelo de regressão multilinear. Somente o \acrshort{IMC} demonstrou ter significância estatística (p<0,05) para este modelo. A equação de regressão \ref{equ:equacaoGenerica} representa este modelo. 
+Para determinação de uma equação geral foram considerados os dados de todos os indivíduos em um grande conjunto. Desconsideramos os grupos populacionais e utilizamos os dados de todos os seis grupos como entrada de um método de regressão multilinear. A amostra populacional randômica é de n=200 (número de indivíduos em cada grupo), considerando os 6 grupos tem-se então uma população para esta abordagem de n=1200. A influência de todas as variáveis  independentes (massa, altura, idade e \acrshort{IMC}) foi testada em relação à \acrshort{DEE} no modelo de regressão multilinear. Somente o \acrshort{IMC} demonstrou ter significância estatística (p<0,05). A equação de regressão \ref{equ:equacaoGenerica} representa este modelo. 
 
 \begin{equation}
 \label{equ:equacaoGenerica}
 Y=2,52+0,11 IMC
 \end{equation}
+
+Levando em consideração os dados de todos os grupos, o valor médio da \acrshort{DEE} é de 5,3 cm com um desvio padrão de 0,74 cm. Os valores mínimos e máximos são respectivamente 3,82 cm e 8,6 cm. A Figura~\ref{fig:imcDEEPopulacoesComparativoEquacaoGenerica} mostra graficamente a comparação dos resultados das estimativas da  \acrshort{DEE} para as equações de todos os grupos em relação à equação genérica (curva laranja). O grupo de nome “RU - Negras” apresenta os maiores valores de \acrshort{DEE} e o grupo Índia e "RU - Chinesas" apresentam os valores mais baixos. Os resultados da equação genérica apresentam como resposta um valor médio de todos os grupos.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{capitulos/figuras/IMC versus DEE grupos populacionais e Equacao Generica.png.png} 
+    \caption{\acrshort{IMC} x \acrshort{DEE} para os grupos populacionais em comparação a equação genérica.}
+    \label{fig:imcDEEPopulacoesComparativoEquacaoGenerica}
+\end{figure}
+
+O valor do R-quadrado ajustado referente a equação \ref{equ:equacaoGenerica} 69,19\%. Este valor indica a proximidade entre os valores observados e estimados da variável analisada (neste caso a \acrshort{DEE}). É um indicativo de quanto o modelo de regressão se aproximou dos dados de entrada. É importante ressaltar que não encontramos nas nossas pesquisas dados deste tipo para a população brasileira que é conhecidamente uma população miscigenada. O foco dessa tese é na representação da realidade brasileira. Com uma aproximação de quase 70\% e representando uma média das diferentes populações usadas como entrada para este cálculo assumimos que a equação Genérica pode ser satisfatória para fins de determinação da \acrshort{DEE} de brasileiras. E que esta pode ser utilizada quando não houver equações mais precisas para o grupo de população em estudo (que é o caso) por que o mesmo foi estimado a partir de uma população mais diversa e abrangente.
+
 
 ================================== artigo Anesthesua 1006 =====
 Continuar depois da equação geral
