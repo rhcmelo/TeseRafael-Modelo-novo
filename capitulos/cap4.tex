@@ -157,11 +157,30 @@ Para configuração do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014} que
 
 \section {Etapas da simulação}
 
-O simulador ao ser iniciado apresenta uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário deve então usar o dispositivo háptico para interagir com o ambiente virtual
+O simulador ao ser iniciado apresenta uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário deve então usar o dispositivo háptico para interagir com o ambiente virtual. Ao ser iniciado o sistema e a cada inicio de procedimento em uma nova paciente ao movimentar o dispositivo háptico o item que representa o dedo é movimentado no ambiente virtual de treinamento. O item no ambiente 3D que representa o dedo pode ser observado na Figura~\ref{fig:elementosDeInteracao} (a) do lado direito do tronco da paciente. Outro item a ser observado nesta imagem é uma esfera azul que indica onde foi o último toque do dedo no corpo da paciente. O último ponto tocado foi a estratégia definida para determinação da escolha do ponto de inserção da agulha na simulação. Nas Figuras~\ref{fig:elementosDeInteracao} (b) e (c) estão atrás do tronco da paciente respectivamente a seringa para anestesia local e a agulha usada para aplicação da raquianestesia. No momento da aplicação da raquianestesia uma seringa é conectada no final da agulha como pode ser visto pela visão lateral na Figura~\ref{fig:agulhaRaquiSeringa}.
 
-Primeiro ele precisa identificar via apalpação um dos pontos de inserção da agulha possíveis. Em seguida é necessário aplicar o anestésico local neste ponto de inserção da agulha inserindo a seringa somente até a camada da gordura subcutânea (perfurando somente a camada corporal) para aplicação. Então ele precisa inserir a agulha de raquianestesia neste ponto e avançar pelas camadas até o espaço subaracnóide onde precisa então ministrar a anestesia. Os procedimentos são finalizados no momento que é aplicada a raquianestesia, ou seja, ao ser pressionado o embolo da seringa conectada na agulha.
+\begin{figure}[ht!]
+    \centering
+        \begin{tabular}{ccc}
+        \includegraphics[width=0.3\linewidth]{capitulos/figuras/corpo-paciente-apos-apalpacao-dedo.png} & 
+        \includegraphics[width=0.27\linewidth]{capitulos/figuras/corpo-paciente-seringa.png} & 
+        \includegraphics[width=0.27\linewidth]{capitulos/figuras/corpo-paciente-agulha-raqui.png} 
+        \\
+        (a) & (b) & (c)
+        \end{tabular}
+    \caption{Elementos 3D de interação com o ambiente representativos do: (a) Dedo (b) Seringa para anestesia local (c) Agulha de raquianestesia.}
+    \label{fig:elementosDeInteracao}
+\end{figure}
 
-O usuário precisa ter uma média de notas acima de seis na execução de procedimentos usando o simulador para que sua habilidade seja considerada satisfatória. É necessário completar a execução de ao menos três procedimentos tendo a média acima de seis para que a habilidade do usuário seja considerada como satisfatória. A nota final corresponde a média da nota obtida em todos os procedimentos executados. No casos de não se atingir a média seis nos três primeiros procedimentos será necessário executar tantos procedimentos quanto forem necessários para se chegar a média seis considerando todos os procedimentos executados. São apresentados \textit{feedbacks} para o usuário durante e ao final de cada procedimento executado em cada um dos pacientes.  
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\linewidth]{capitulos/figuras/corpo-visao-lateral-agulhaRaquiSeringa.png} 
+    \caption{Visão lateral do corpo da paciente com aproximação da agulha de raquianestesia com a seringa conectada.}
+    \label{fig:agulhaRaquiSeringa}
+\end{figure}
+
+Cada procedimento no simulador é considerado como sendo finalizado no momento que é aplicada a raquianestesia, ou seja, ao ser pressionado o embolo da seringa conectada na agulha desde que esta esteja dentro do corpo do paciente.
+É necessário completar a execução de ao menos três procedimentos tendo a média acima de seis para que a habilidade do usuário seja considerada como satisfatória. A nota final corresponde a média da nota obtida em todos os procedimentos executados. No casos de não se atingir a média seis nos três primeiros procedimentos será necessário executar tantos procedimentos quanto forem necessários para se chegar a média seis considerando todos os procedimentos executados.   
 
 A Tabela~\ref{tab:PontosNotaProcedimento} ilustra a pontuação para formação da nota de cada procedimento. Para cada procedimento a nota inicia em zero. Itens feitos corretamente e na sequência correta tem pontuação negativa e itens feitos de forma incorreta ou não feitos tem pontuação negativa. Para algumas ações não feitas ao invés da pontuação negativa não é aplicada nenhuma penalização uma vez que a não execução correta já acarreta em penalização por não adicionar pontuação positiva na nota. 
 
@@ -174,7 +193,8 @@ A Tabela~\ref{tab:PontosNotaProcedimento} ilustra a pontuação para formação 
 \textbf{Item executado} & \textbf{Ponto}\\
 \hline\hline
 Execução da apalpação para determinação do local de inserção da agulha & +1\\
-Perfuração do corpo com seringa ou agulha antes da apalpação & -1\\
+%Perfuração do corpo com seringa ou agulha antes da apalpação & -1\\
+Anestesia local não aplicada & -1\\
 Anestesia local aplicada com a seringa no local correto & +3\\
 Avanço com a seringa até camadas indevidas (ex. ossos, espaço epidural) & -1\\
 Perfuração do corpo da paciente duas ou três vezes (com seringa ou agulha) & -1\\
@@ -182,11 +202,12 @@ Perfuração do corpo da paciente quatro vezes ou mais (com seringa ou agulha) &
 Inseriu a agulha de raquianestesia sem antes aplicar a anestesia local & -1\\
 Aplicação da raquianestesia em local diferente do espaço subaracnóide & -3\\
 Aplicação da raquianestesia no espaço subaracnóide & +6\\
+\hline
 \end{tabular}
 \end{center}
 \end{table}
 
-As Figuras \ref{fig:sistemaExecucao1RaquiLocalIncorreto}, \ref{fig:sistemaExecucao2seringa}, \ref{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocal}, \ref{fig:sistemaExecucao4correto} e \ref{fig:sistemaExecucao5semApalpacao} mostram uma sequência de possíveis execuções de anestesias ilustrando diferentes erros e acertos durante cada procedimento que são visualizados no \textit{feedback} a direita durante os procedimentos e na janela de \textit{popup} ao final de cada um.  
+São apresentados \textit{feedbacks} para o usuário durante e ao final dos procedimento executado em cada uma das pacientes. As Figuras \ref{fig:sistemaExecucao1RaquiLocalIncorreto}, \ref{fig:sistemaExecucao2seringa}, \ref{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocal}, \ref{fig:sistemaExecucao4correto} e \ref{fig:sistemaExecucao5semApalpacao} mostram uma sequência de possíveis execuções de anestesias ilustrando diferentes erros e acertos durante cada procedimento que são visualizados no \textit{feedback} a direita durante os procedimentos e na janela de \textit{popup} ao final de cada um.  
 
 \begin{figure}[ht!]
     \centering
@@ -198,7 +219,7 @@ As Figuras \ref{fig:sistemaExecucao1RaquiLocalIncorreto}, \ref{fig:sistemaExecuc
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-2.png} 
-    \caption{Exemplo de finalização de um segundo procedimento onde a seringa foi inserida três vezes no corpo da paciente e esta tocou partes indevidas.}
+    \caption{Exemplo de finalização de um segundo procedimento onde a seringa foi inserida mais de três vezes no corpo da paciente e esta tocou partes indevidas.}
     \label{fig:sistemaExecucao2seringa}
 \end{figure}
 
