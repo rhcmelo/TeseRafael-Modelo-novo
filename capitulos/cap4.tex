@@ -158,21 +158,25 @@ Para configuração do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014} que
 \section {Etapas da simulação}
 
 O simulador ao ser iniciado apresenta uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário precisa ter uma média de notas acima de seis na execução de procedimentos usando o simulador para que sua habilidade seja considerada satisfatória. É necessário completar a execução de ao menos três procedimentos tendo a média acima de seis para que a habilidade do usuário seja considerada como satisfatória. A nota final corresponde a média da nota obtida em todos os procedimentos executados. No casos de não se atingir a média seis nos três primeiros procedimentos será necessário executar tantos procedimentos quanto forem necessários para se chegar a média seis considerando todos os procedimentos executados. São apresentados \textit{feedbacks} para o usuário durante e ao final de cada procedimento executado em cada um dos pacientes. Primeiro ele precisa identificar via apalpação um dos pontos de inserção da agulha possíveis. Em seguida é necessário aplicar o anestésico local neste ponto de inserção da agulha inserindo a seringa somente até a camada da gordura subcutânea (perfurando somente a camada corporal) para aplicação. Então ele precisa inserir a agulha de raquianestesia neste ponto e avançar pelas camadas até o espaço subaracnóide onde precisa então ministrar a anestesia. 
-A Tabela~\ref{tab:PontosNotaProcedimento} ilustra a pontuação para formação da nota de cada procedimento. Itens feitos corretamente e na sequência correta tem pontuação negativa e itens feitos de forma incorreta ou não feitos tem pontuação negativa.
+A Tabela~\ref{tab:PontosNotaProcedimento} ilustra a pontuação para formação da nota de cada procedimento. Para cada procedimento a nota inicia em zero. Itens feitos corretamente e na sequência correta tem pontuação negativa e itens feitos de forma incorreta ou não feitos tem pontuação negativa. Para algumas ações não feitas ao invés da pontuação negativa não é aplicada nenhuma penalização uma vez que a não execução correta já acarreta em penalização por não adicionar pontuação positiva na nota. 
 
 \begin{table}[!ht]
 \begin{center}
 \caption{Pontos para formarem a nota final de cada procedimento.}
 \label{tab:PontosNotaProcedimento}
-\begin{tabular}{|p{0.8\linewidth}|p{0.2\linewidth}|}
+\begin{tabular}{|p{0.9\linewidth}|p{0.1\linewidth}|}
 \hline
 \textbf{Item executado ou esquecido} & \textbf{Ponto}\\
 \hline\hline
-Idade (anos) & 6,58\\
-Altura (m) & 0,15\\
-Massa (kg) & 11,80\\
-IMC (kg\/m\^2) & 6,55\\
-\hline
+Execução da apalpação para determinação do local de inserção da agulha & +1\\
+Perfuração do corpo com seringa ou agulha antes da apalpação & -1\\
+Anestesia local aplicada com a seringa no local correto & +3\\
+Avanço com a seringa até camadas indevidas (ex. ossos, espaço epidural) & -1\\
+Perfuração do corpo da paciente mais que uma e menos do que quatro vezes (com seringa ou agulha) & -1\\
+Perfuração do corpo da paciente quatro vezes ou mais (com seringa ou agulha) & -2\\
+Inseriu a agulha de raquianestesia sem antes aplicar a anestesia local & -1\\
+Aplicação da raquianestesia em local diferente do espaço subaracnóide & -3\\
+Aplicação da raquianestesia no espaço subaracnóide & +6\\
 \end{tabular}
 \end{center}
 \end{table}
