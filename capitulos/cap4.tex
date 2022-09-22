@@ -157,4 +157,59 @@ Para configuração do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014} que
 
 \section {Etapas da simulação}
 
-O simulador ao ser iniciado apresenta uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário precisa ter uma média de notas acima de seis na execução de procedimentos usando o simulador para que sua habilidade seja considerada satisfatória. É necessário completar a execução de ao menos três procedimentos tendo a média acima de seis para que a habilidade do usuário seja considerada como satisfatória. A nota final corresponde a média da nota obtida em todos os procedimentos executados. No casos de não se atingir a média seis nos três primeiros procedimentos será necessário executar tantos procedimentos quanto forem necessários para se chegar a média seis considerando todos os procedimentos executados. São apresentados \textit{feedbacks} para o usuário durante e ao final de cada procedimento executado em cada um dos pacientes. Primeiro ele precisa identificar via apalpação um dos pontos de inserção da agulha possíveis. Em seguida é necessário aplicar o anestésico local neste ponto de inserção da agulha inserindo a seringa somente até a camada da gordura subcutânea (perfurando somente a camada corporal) para aplicação. Então ele precisa inserir a agulha de raquianestesia neste ponto e avançar pelas camadas até o espaço subaracnóide onde precisa então ministrar a anestesia. A tabela ilustra a pontuação para formação da nota de cada procedimento. 
+O simulador ao ser iniciado apresenta uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário precisa ter uma média de notas acima de seis na execução de procedimentos usando o simulador para que sua habilidade seja considerada satisfatória. É necessário completar a execução de ao menos três procedimentos tendo a média acima de seis para que a habilidade do usuário seja considerada como satisfatória. A nota final corresponde a média da nota obtida em todos os procedimentos executados. No casos de não se atingir a média seis nos três primeiros procedimentos será necessário executar tantos procedimentos quanto forem necessários para se chegar a média seis considerando todos os procedimentos executados. São apresentados \textit{feedbacks} para o usuário durante e ao final de cada procedimento executado em cada um dos pacientes. Primeiro ele precisa identificar via apalpação um dos pontos de inserção da agulha possíveis. Em seguida é necessário aplicar o anestésico local neste ponto de inserção da agulha inserindo a seringa somente até a camada da gordura subcutânea (perfurando somente a camada corporal) para aplicação. Então ele precisa inserir a agulha de raquianestesia neste ponto e avançar pelas camadas até o espaço subaracnóide onde precisa então ministrar a anestesia. 
+A Tabela~\ref{tab:PontosNotaProcedimento} ilustra a pontuação para formação da nota de cada procedimento. Itens feitos corretamente e na sequência correta tem pontuação negativa e itens feitos de forma incorreta ou não feitos tem pontuação negativa.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Pontos para formarem a nota final de cada procedimento.}
+\label{tab:PontosNotaProcedimento}
+\begin{tabular}{|p{0.8\linewidth}|p{0.2\linewidth}|}
+\hline
+\textbf{Item executado ou esquecido} & \textbf{Ponto}\\
+\hline\hline
+Idade (anos) & 6,58\\
+Altura (m) & 0,15\\
+Massa (kg) & 11,80\\
+IMC (kg\/m\^2) & 6,55\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+As Figuras \ref{fig:sistemaExecucao1RaquiLocalIncorreto}, \ref{fig:sistemaExecucao2seringa}, \ref{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocal}, \ref{fig:sistemaExecucao4correto} e \ref{fig:sistemaExecucao5semApalpacao} mostram uma sequência de possíveis execuções de anestesias ilustrando diferentes erros e acertos durante cada procedimento que são visualizados no \textit{feedback} a direita durante os procedimentos e na janela de \textit{popup} ao final de cada um.  
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-1.png} 
+    \caption{Exemplo de finalização de um primeiro procedimento onde a raquianestesia foi aplicada em local incorreto.}
+    \label{fig:sistemaExecucao1RaquiLocalIncorreto}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-2.png} 
+    \caption{Exemplo de finalização de um segundo procedimento onde a seringa foi inserida três vezes no corpo da paciente e esta tocou partes indevidas.}
+    \label{fig:sistemaExecucao2seringa}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-3.png} 
+    \caption{Exemplo de finalização de um terceiro procedimento onde o usuário não fez a apalpação para escolher o ponto de inserção da agulha e nem aplicou a anestesia local antes de inserção da agulha de raquianestesia.}
+    \label{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocal}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-4.png} 
+    \caption{Exemplo de finalização de um quarto procedimento onde todo o procedimento foi executado de forma correta.}
+    \label{fig:sistemaExecucao4correto}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-5.png} 
+    \caption{Exemplo de finalização de um quinto procedimento onde só não foi feita a apalpação para determinação do ponto de inserção da agulha.}
+    \label{fig:sistemaExecucao5semApalpacao}
+\end{figure}
