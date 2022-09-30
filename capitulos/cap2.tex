@@ -151,6 +151,8 @@ O \textit{Phantom Premium} ® (Figura~\ref{fig:hapticoPremium}) está disponíve
 
 Um dos passos necessários para construção de um ambiente virtual para treinamento de raquianestesia é a criação de pacientes virtuais. Um aspecto importante da modelagem destes pacientes é como eles aparecem na tela da aplicação. Outro aspecto importante na simulação é ter uma estimativa da espessura dos tecidos envolvidos nestes tipos de anestesia. Para isto é necessária à modelagem da espessura de todas as camadas de tecido pelos quais as agulhas passam para execução destes procedimentos. Uma ilustração destes tecidos que vão desde a pele até o espaço subaracnóide (onde deve ser aplicada a anestesia) pode ser vista na Figura~\ref{fig:camadasPuncaoLombar}. Nesta seção são descritos trabalhos relacionados com a modelagem da distância entre a pele e a dura-máter que é a camada imediatamente anterior ao espaço subaracnóide.
 
+Na Tabela~\ref{tab:variaveisUnidades} são listadas as varáveis de entrada e saída dos métodos estudados nesta seção. Esta tabela exibe também as unidades destas variáveis que serão utilizadas em todo este trabalho.
+
 \begin{table}[!ht]
 \begin{center}
 \caption{Variáveis e unidades de medida utilizadas no texto.}
@@ -162,18 +164,16 @@ Um dos passos necessários para construção de um ambiente virtual para treinam
 Massa (M) & quilogramas & kg \\
 Altura (A) & metros & m \\
 Idade (I) & anos & - \\
-\acrfull{IMC} - M/A\textasciicircum{}2 & quilogramas/metros\textasciicircum{}2 & kg/m\textasciicircum{}2 \\
+\acrfull{IMC} - $M/A^2$ & quilogramas/metros^2 & $kg/m^2$ \\
 \acrfull{DEE} & centímetros & cm \\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-Na Tabela~\ref{tab:variaveisUnidades} são listadas as varáveis de entrada e saída dos métodos estudados nesta seção. Esta tabela exibe também as unidades destas variáveis que serão utilizadas em todo este trabalho.
+Muitos trabalhos buscam relacionar a \acrfull{DEE} com as demais variáveis da Tabela~\ref{tab:variaveisUnidades}. A grande maioria dos trabalhos estudados indica uma forte relação da \acrshort{DEE} com o \acrshort{IMC}. \textcite{Adegboye2017, Galbraith2018} não fazem separação dos grupos populacionais por idade, sexo ou etnia, e usaram populações respectivamente de n=120 e n=317 pessoas entre homens e mulheres.
 
-Muitos trabalhos buscam relacionar a \acrfull{DEE} com as demais variáveis da Tabela~\ref{tab:variaveisUnidades}. A grande maioria dos trabalhos indica uma forte relação da \acrshort{DEE} com o \acrshort{IMC} \cite{Adegboye2017, Galbraith2018}. Estes dois trabalhos não fazem separação dos grupos populacionais por idade, sexo ou etnia, e usaram populações respectivamente de n=120 e n=317 pessoas entre homens e mulheres.
-
-Os trabalhos citados a seguir analisaram somente ou de forma separada grupos de mulheres grávidas. Como este é o foco deste trabalho só serão comentadas aqui as conclusões referentes a estes grupos. Todos os trabalhos a seguir encontraram influencia do \acrshort{IMC} na determinação da \acrshort{DEE}, mas além desta relação também foram encontradas outras combinações em cada trabalho. O grupo étnico/populacional do individuo foi observado em conjunto com o \acrshort{IMC} em \cite{Sharma2011} estudo feito no \acrfull{RU}. A idade foi observada em conjunto com o \acrshort{IMC} num estudo em pacientes americanas em Michigan, EUA \cite{Clinkscales2007}. A altura, massa, idade e \acrshort{IMC} foram observados como relevantes em um estudo em pacientes da Índia \cite{Hazarika2016}. Estes dois últimos trabalhos construíram equações de regressão linear para determinação da \acrshort{DEE} para grupos de parturientes conforme pode ser visto na Tabela~\ref{tab:equacoesEstimativaDEE}.
+Os trabalhos citados a seguir analisaram somente ou de forma separada grupos de mulheres grávidas. Como este é o foco deste trabalho só serão comentadas aqui as conclusões referentes a estes grupos. Todos os trabalhos a seguir encontraram influencia do \acrshort{IMC} na determinação da \acrshort{DEE}, mas além desta relação também foram encontradas outras combinações em cada trabalho. O grupo étnico/populacional do individuo foi observado em conjunto com o \acrshort{IMC} em \textcite{Sharma2011} estudo feito no \acrfull{RU}. A idade foi observada em conjunto com o \acrshort{IMC} num estudo em pacientes americanas em Michigan, EUA \cite{Clinkscales2007}. A altura, massa, idade e \acrshort{IMC} foram observados como relevantes em um estudo em pacientes da Índia \cite{Hazarika2016}. Estes dois últimos trabalhos construíram equações de regressão linear para determinação da \acrshort{DEE} para grupos de parturientes conforme pode ser visto na Tabela~\ref{tab:equacoesEstimativaDEE}.
 
 \begin{table}[!ht]
 \begin{center}
@@ -235,9 +235,9 @@ Trabalho & {\begin{tabular}[c]{@{}c@{}}Grupo populacional – origem dos \\ dado
 \end{center}
 \end{table}
 
-A listagem dos tecidos entre a pele e a \acrshort{DEE} e a relação dessa distância com o aumento de peso é comentada em \cite{Palmer1983}. Os autores concluem que com o aumento do peso/massa (do paciente) o tecido que sofre a maior variação é a gordura subcutânea.
+A listagem dos tecidos entre a pele e a \acrshort{DEE} e a relação dessa distância com o aumento de peso é comentada em \textcite{Palmer1983}. Os autores concluem que com o aumento da massa (do paciente) o tecido que sofre a maior variação é a gordura subcutânea.
 
 Esta tese propõe uma equação mais universal para determinar a \acrshort{DEE} de parturientes, levando em consideração os dados dos estudos locais comentados nesta seção. Isto por que este dado é uma informação essencial para permitir a criação de pacientes virtuais em um simulador de anestesia raquidiana para fins de treinamento. 
-A proposta da criação desta equação mais geral está descrita na seção \ref{sec:SimulacaoPacientesVirtuais} onde os trabalhos comentados aqui \cite{Clinkscales2007, Sharma2011, Hazarika2016} servem de entrada para uma nova modelagem de tecidos de pacientes grávidas.
+A proposta da criação desta equação mais geral está descrita na seção \ref{sec:SimulacaoPacientesVirtuais} onde os trabalhos comentados aqui \cite{Clinkscales2007, Sharma2011, Hazarika2016} são utilizados para uma nova modelagem de tecidos de pacientes grávidas.
 
-Este capítulo apresentou uma fundamentação teórica sobre anestesia raquidiana e aspectos necessários para construção de um simulador deste tipo de anestesia que envolvem realidade virtual, dispositivos hápticos e modelagem de tecidos que são as principais entidades relacionadas com a proposta desta tese. O próximo capítulo oferece uma visão das pesquisas relacionadas ao tema desta tese e compara-as com as proposições que foram colocadas ao longo deste trabalho. Essas pesquisas tratam de simuladores puramente computacionais como o proposto neste trabalho assim como de simuladores que fazem uso de \textit{phantoms} para demonstrar prós e contras de cada abordagem.
+Este capítulo apresentou uma fundamentação teórica sobre anestesia raquidiana e aspectos necessários para construção de um simulador deste tipo de anestesia que envolvem realidade virtual, dispositivos hápticos e modelagem de tecidos que são as principais entidades relacionadas com esta tese. O próximo capítulo oferece uma visão das pesquisas relacionadas ao tema desta tese e compara-as com os objetivos que foram colocadas ao longo deste trabalho. Essas pesquisas tratam de simuladores puramente computacionais como o proposto neste trabalho assim como de simuladores que fazem uso de \textit{phantoms} para demonstrar prós e contras de cada abordagem.
