@@ -1,21 +1,23 @@
 \chapter{Trabalhos Relacionados} \label{cap:cap3}
 
-%Os trabalhos apresentados neste capítulo vão desde simuladores que usam só \textit{phantoms} a simuladores computacionais. É interessante destacar que alguns simuladores computacionais são híbridos no sentido de que usam \textit{phantoms} como parte do processo de simulação. 
+Os trabalhos apresentados neste capítulo vão desde abordagens de simulação de procedimentos de anestesia usando \textit{phantons} a simuladores computacionais. É interessante destacar que alguns simuladores computacionais são híbridos no sentido de que usam \textit{phantoms} como parte do processo de simulação. Apresentamos ao final um comparativo descrevendo a nossa abordagem frente aos principais benefícios de cada abordagem estudada.  
 
-Os trabalhos apresentados neste capítulo vão desde abordagens de simulação de procedimentos de anestesia usando \textit{phantons} passando por simuladores computacionais bem como os diferentes tipos de modelagens de partes do corpo humano usados para simulações médicas.  
+\textcite{Vaughan2013} citam trinta e um simuladores (entre computacionais e com uso de \textit{phantoms}). Destes, dezesseis são apenas epidurais, nove que permitem tanto a punção epidural quanto a raquidiana e seis apenas raquidianos. São discutidas as limitações e vantagens de cada um, de forma a identificar características desejáveis para serem incluídas em um simulador. 
 
-\textcite{Vaughan2013} citam trinta e um simuladores (entre computacionais e com uso de \textit{phantoms}). Destes, dezesseis são apenas epidurais, nove que permitem tanto a punção epidural quanto a raquidiana e seis apenas raquidianos. São discutidas as limitações e vantagens de cada um, de forma a identificar características desejáveis para serem incluídas em um simulador \cite{Vaughan2013}. No trabalho de \textcite{Isaacs2015} os autores citam uma pesquisa onde também são elencadas diversas características interessantes para um simulador epidural \cite{Isaacs2015}. Dentre os itens com mais relevância citados por \textcite{Isaacs2015} estão: coluna fisicamente palpável, representação da técnica de perda de resistência (do inglês inglês Lost of Resistence, \acrshort{LoR}) de forma realista (para solução salina e ar), ajuste da posição do paciente, mapeamento de características do paciente (obesidade, gravidez), \textit{feedback} a respeito da correta execução.
+No trabalho de \textcite{Isaacs2015} os autores citam uma pesquisa onde também são elencadas diversas características interessantes para um simulador epidural. Dentre os itens com mais relevância citados por \textcite{Isaacs2015} estão: coluna fisicamente palpável, representação da técnica de perda de resistência (do inglês inglês Lost of Resistence, \acrshort{LoR}) de forma realista (para solução salina e ar), ajuste da posição do paciente, mapeamento de características do paciente (obesidade, gravidez), \textit{feedback} a respeito da correta execução.
+
 A principal vantagem dos modelos com uso de \textit{phantoms} é a presença física do manequim que representa o paciente. Uma das principais desvantagens é a dificuldade na variabilidade de cenários (pacientes) distintos. Outra desvantagem é a dificuldade na representação da diferença existente entre a resistência dos tecidos biológicos e os tecidos nos quais os modelos físicos são constituídos (usualmente borracha e plástico).
-Os dispositivos hápticos têm melhorado muito ao longo dos últimos anos. Os modelos computacionais com hápticos têm como pontos a favor a versatilidade. As possibilidades computacionais da tecnologia háptica e as visualizações 3D de tempo real são outros pontos positivos associados a esta tecnologia. 
+
+Os dispositivos hápticos têm evoluído muito ao longo dos últimos anos. Os modelos computacionais com hápticos têm como pontos a favor a versatilidade. As possibilidades computacionais da tecnologia háptica e as visualizações 3D de tempo real são outros pontos positivos associados a esta tecnologia. 
 Soluções computacionais podem criar um modelo de forças de inserção da agulha. Para este fim pode-se usar como base as medições das forças aplicadas para inserção de agulhas em animais considerados próximos dos humanos, assim como em cadáveres e até mesmo voluntários reais \cite{Hiemenz1998, Holton2001,Langton1990,McKay2010,Naemura2009,Tran2009,Vaughan2012}. Estes modelos podem contemplar uma grande variabilidade de cenários através de ajustes de parâmetros. 
 
 A seguir serão apresentados os simuladores de punções mais completos. Primeiro os que somente fazem uso de \textit{phantoms}, em seguida os que usam de ferramentas computacionais.  
 
 \section{Simuladores que só usam \textit{phantoms}} \label{sec:SimuladoresPhantoms}
 
-Os simuladores baseados em \textit{phantoms} (ou manequins) mais completos são listados aqui com suas principais características. As características positivas devem idealmente ser contempladas ou até melhoradas em novos simuladores. Todas as soluções listadas estão disponíveis atualmente. Elas permitem ao menos a simulação da anestesia peridural, possuem a coluna fisicamente palpável e permitem a escolha do ponto e ângulo de inserção da agulha. Todos esses trabalhos permitem que o procedimento seja feito com o paciente sentado ou deitado e o escoamento do fluido cérebro espinhal é simulado ao perfurar a dura-máter. As abordagens mediana e paramediana de inserção de agulha são possíveis em todos estes simuladores.
+Os simuladores baseados em \textit{phantoms} (ou manequins) mais completos são discutidos aqui com suas principais características. As características positivas devem idealmente ser contempladas ou até melhoradas em novos simuladores. Todas as soluções listadas estão disponíveis atualmente. Elas permitem ao menos a simulação da anestesia peridural, possuem a coluna fisicamente palpável e permitem a escolha do ponto e ângulo de inserção da agulha. Todos esses trabalhos permitem que o procedimento seja feito com o paciente sentado ou deitado e o escoamento do fluido cérebro espinhal é simulado ao perfurar a dura-máter. É possível escolher o ponto de inserção em todos estes simuladores.
 
-A solução \textit{SimULab Lumbar Epidural Trainer} possui até 3 variações de pacientes (normal, idoso e obeso). A Figura \ref{fig:simuladorSimulab} ilustra o uso deste simulador onde na esquerda da imagem (a) está a simulação da inserção da agulha no manequim e na imagem da direita (b) o uso do ultrassom. O material deste manequim foi produzido de forma a permitir o uso de ultrassom \cite{SimulabCorporation2008}. 
+A solução \textit{SimULab Lumbar Epidural Trainer} possui até 3 variações de pacientes (normal, idoso e obeso). A Figura \ref{fig:simuladorSimulab} ilustra o uso deste simulador. O material deste manequim foi produzido de forma a permitir o uso deste equipamento \cite{SimulabCorporation2008}. Este simulador permite somente a anestesia epidural e foi incluído aqui por que esta anestesia possui algumas similaridades com as anestesias raquidianas. 
 
 \begin{figure}[ht!]
     \centering
@@ -25,11 +27,20 @@ A solução \textit{SimULab Lumbar Epidural Trainer} possui até 3 variações d
         \\
         (a) & (b)
         \end{tabular}
-    \caption{Demonstração de uso do simulador SimULab Lumbar Epidural Trainer \cite{SimulabCorporation2008}.}
+    \caption{Demonstração de uso do simulador SimULab Lumbar Epidural Trainer \cite{SimulabCorporation2008}: (a) Inserção da agulha (b) Exame de ultrassom.}
     \label{fig:simuladorSimulab}
 \end{figure}
 
-O \textit{Blue Phantom Lumbar Puncture and Spinal Epidural} (Figura \ref{fig:bluePhantom}) também foi produzido em material que possibilita o uso do ultrassom. Na imagem (a) aparece o manequim e na (b) e (c) aparecem respectivamente o uso do ultrassom e o escorrimento do líquor. Este simulador possui somente duas opções de variação de pacientes (normal e obeso) \cite{BluePhantom2011}. 
+O simulador \textit{Nasco Life/form® Spinal Injection Sim} permite treinamentos nos dois tipos principais das anestesias regionais. As vértebras L1 e L2 ficam visíveis externas ao corpo simulado pelo manequim como pode ser visto na Figura \ref{fig:nascoSimulator}. Ele somente permite a punção entre as vértebras L3 até L5 \cite{Nasco2008}. 
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.3\linewidth]{capitulos/figuras/nascoSimulator.png} 
+    \caption{Demonstração de uso do simulador \textit{Nasco Life/form® Spinal Injection Sim} \cite{Nasco2008}.}
+    \label{fig:nascoSimulator}
+\end{figure}
+
+O \textit{Blue Phantom Lumbar Puncture and Spinal Epidural} (Figura \ref{fig:bluePhantom}) também foi produzido em material que possibilita o uso do ultrassom. Este simulador possui somente duas opções de variação de pacientes (normal e obeso) e possibilita tanto anestesias epidurais como raquidianas \cite{BluePhantom2011}. 
 
 \begin{figure}[ht!]
     \centering
@@ -41,45 +52,43 @@ O \textit{Blue Phantom Lumbar Puncture and Spinal Epidural} (Figura \ref{fig:blu
         \\
         (a) & (b) & (c)
         \end{tabular}
-    \caption{Blue Phantom Lumbar Puncture and Spinal Epidural \cite{BluePhantom2011}.}
+    \caption{Blue Phantom Lumbar Puncture and Spinal Epidural \cite{BluePhantom2011}: (a) Manequim (b) Uso do ultrasssom (c) Escorrimento do líquor do manequim.}
     \label{fig:bluePhantom}
 \end{figure}
 
-O M43B \textit{Lumbar puncture simulator}-II (Figura \ref{fig:m43bSimulator}) permite 3 variações de pacientes (normal, idoso e obeso) e simula também a anestesia raquidiana \cite{KyotokagakuCo.2011}. Uma limitação deste é somente apresentar as vértebras L2 até L5 mas como vimos anteriormente, na seção \ref{sec:anestesiaRaquidiana}, estas são as vértebras mais comuns para anestesia raquidiana. A imagem apresenta o kit completo à esquerda, a palpação da coluna no centro e a inserção da agulha à direita.
+S411 \textit{Lumbar Puncture Trainer} é outro simulador de anestesias regionais que pode ser observado na Figura \ref{fig:simuladorS411}. Possui parte substituível vendida em separado que dura, segundo o fabricante, entre 15 e 25 usos dependendo da espessura da agulha usada nas simulações. As vértebras representadas vão da L2 até a L5 mas possibilita a punção entre a L4 e L5 ou L3 e L4. Só permite a inserção da agulha entre vértebras. Só apresenta variações de cor do manequim não representado diferentes classes de pacientes \cite{GaumardScientific}. Um exemplo de video mostrando seu uso pode ser visto no link\footnote{https://youtu.be/O77_UWo0JSc}.
 
 \begin{figure}[ht!]
     \centering
-        \begin{tabular}{ccc}
-        \includegraphics[width=0.3\linewidth]{capitulos/figuras/m43b-kit.jpg} & 
-        \includegraphics[width=0.3\linewidth]{capitulos/figuras/m43b-usoPalpacao.jpg} 
-        &
-        \includegraphics[width=0.3\linewidth]{capitulos/figuras/m43b-usoAgulha.jpg} 
+        \begin{tabular}{cc}
+        \includegraphics[width=0.3\linewidth]{capitulos/figuras/S411-Lumbar Puncture Trainer Kit.png} & 
+        \includegraphics[width=0.3\linewidth]{capitulos/figuras/S411-Lumbar Puncture Trainer Needle.png} 
         \\
-        (a) & (b) & (c)
+        (a) & (b)
         \end{tabular}
-    \caption{Kit e exemplo de uso do simulador M43B \textit{Lumbar puncture simulator}-II \cite{KyotokagakuCo.2011}.}
-    \label{fig:m43bSimulator}
+    \caption{Demonstração do simulador S411 Lumbar Puncture Trainer \cite{GaumardScientific}: (a) Kit (b) Inserção da agulha.}
+    \label{fig:simuladorS411}
 \end{figure}
 
-Outro simulador que também permite a anestesia raquidiana é o \textit{Nasco Life/form® Spinal Injection Sim}. As vértebras L1 e L2 ficam visíveis externas ao corpo simulado pelo manequim. Ele somente permite a punção entre as vértebras L3 até L5 \cite{Nasco2008}. Na imagem da Figura \ref{fig:nascoSimulator} aparece um exemplo de uso deste simulador.
+Outro simulador que também possibilita anestesias epidurais e raquidianas é o M43E \textit{Ultrasound Compatible Lumbar Puncturee/Epidural Simulator}. Ele possui 4 variações de pacientes (normal, obeso, idoso e idoso obeso) e possibilita o uso ultrassom como demostrado na Figura \ref{fig:M43ESimulator} . Uma limitação deste é somente apresentar as vértebras L2 até L5 \cite{KyotoKagaku2015}mas como vimos anteriormente, na seção \ref{sec:anestesiaRaquidiana}, estas são as vértebras mais comuns para anestesia raquidiana.
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.3\linewidth]{capitulos/figuras/nascoSimulator.png} 
-    \caption{Demonstração de uso do simulador \textit{Nasco Life/form® Spinal Injection Sim} \cite{Nasco2008}.}
-    \label{fig:nascoSimulator}
+    \includegraphics[width=0.3\linewidth]{capitulos/figuras/M43E Simulator.png} 
+    \caption{M43E \textit{Ultrasound Compatible Lumbar Puncture/Epidural Simulator} \cite{KyotoKagaku2015}.}
+    \label{fig:M43ESimulator}
 \end{figure}
 
-A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de características importantes destes simuladores. 
+A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de características importantes destes simuladores. Durante as pesquisas encontramos outros simuladores que não foram descritos aqui por possuírem  características muitos similares ou serem menos abrangentes dos mencionados aqui.
 
 \begin{table}[!ht]
 \begin{center}
-\caption{Comparação dos simuladores epidurais baseados em phantoms.}
+\caption{Comparação dos simuladores baseados em \textit{phantoms}.}
 \label{tab:comparacaoSimuladoresPhantoms}
 %\begin{tabular}{|p{0.27\linewidth}|p{0.55\linewidth}|p{0.105\linewidth}|}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
-  & 
+  Nome do simulador & 
   \rotatebox{90}{Ano de desenvolvimento} & 
   \rotatebox{90}{Epidural (E) Raquianestesia (R)} & 
   \rotatebox{90}{Testado em hospital} & 
@@ -87,12 +96,13 @@ A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de caracterí
   \rotatebox{90}{Variabilidade de pacientes} & 
   \rotatebox{90}{Coluna palpável} & 
   \rotatebox{90}{Escolha do ponto de inserção da agulha }  & 
-  \rotatebox{90}{Abordagens mediana e paramediana} \\
+  \rotatebox{90}{Abordagens mediana (M) e paramediana (PM)} \\
 \hline\hline
- SimULab Lumbar Epidural Trainer & 2008 & E &  & OK & 3 & OK & OK & OK \\
- {\begin{tabular}[c]{@{}c@{}}Blue Phantom Lumbar Puncture\\ and Spinal Epidural\end{tabular}} & 2011 & ER &  & OK & 2 & OK & OK & OK \\
- M43B Lumbar puncture simulator-II & 2010 & ER & OK &  & 3 & OK & OK & OK \\
- Nasco Life/form® Spinal Injection Sim & 2008 & ER &  &  & 3 & OK & OK & OK \\
+ SimULab Lumbar Epidural Trainer & 2008 & E & N & S & 3 & S & S & MP \\
+ Nasco Life/form® Spinal Injection Sim & 2008 & ER & N & N & 3 & S & S & MP \\
+ {\begin{tabular}[c]{@{}c@{}}Blue Phantom Lumbar Puncture\\ and Spinal Epidural\end{tabular}} & 2011 & ER & N & S & 2 & S & S & MP \\
+ S411 Lumbar Puncture Trainer & 2011 & ER & N & N & 1 & S & S & M\\
+ \begin{tabular}[c]{@{}c@{}}M43E Ultrasound Compatible Lumbar\\ Puncture/Epidural Simulator\end{tabular}} & 2015 & ER & S & S & 4 & S & S & MP \\
 \hline
 \end{tabular}
 \end{center}
