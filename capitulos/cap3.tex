@@ -179,6 +179,20 @@ Um simulador de punção lombar criado por \textcite{Farber2008}  possui, além 
     \label{fig:farberSimDispositivos}
 \end{figure}
 
+========
+
+\textcite{N.2013} criou e descreveu um simulador epidural que fez uso do háptico Novint Falcon e conectou uma seringa ao computador possibilitando a simulação da técnica de \acrshort{LoR}. Este simulador permite a variação de corpos via entrada de parâmetros. Possui simulação da apalpação para determinação do ponto de inserção da agulha e permite as duas abordagens de inserção da agulha. Cada vértebra desde a T2 até a L5 foram mapeada individualmente. O mapeamento das forças necessárias para perfuração e passagem da agulha pelas camadas foi feito através da medição das forças necessárias para execução destas atividades em cadáveres de porcos. porém sem avaliação do usuário. Este simulador permite ainda a aplicação de transparência às camadas, o uso de rotação e zoom para melhor visualização de diferentes aspectos do corpo. Os autores não comentaram sobre \textit{feedback} para o usuário a respeito do seu desempenho somente do \textit{feedback} de forças na execução do procedimento.
+
+===== COLOCAR IMAGEM ====
+
+Já um outro simulador comercial foi testado por 45 anestesistas apresentando um bom \textit{feedback} sobre a qualidade da simulação em muitos aspectos. No entanto, este simulador carecia de realismo nas questões relativas ao ponto de entrada e ângulo correto de inserção da agulha \cite{Lee2012}, que são elementos críticos no procedimento real. O ponto de entrada da agulha também estava fora do escopo de um simulador acoplado a um cilindro pneumático. Este simulador foi testado por oito usuários (dois experientes e seis novatos), com foco na avaliação das habilidades do usuário através do simulador ao invés da validação do simulador em si \cite{Senac2019}. 
+
+Outro estudo testou o uso de um manequim de baixo custo impresso em impressora 3D contra um simulador comercial com resultados comparáveis (teste subjetivo). No entanto, este modelo carece de variabilidade, pois simula apenas um modelo de corpo para cada manequim impresso \cite{Mashari2018}. 
+
+Assim, para construir critérios mais objetivos, nesta tese focamos nossos experimentos em fazer perguntas com respostas esperadas em vez de questionários para validar as opiniões dos usuários. As respostas indicam se um comportamento específico pode ser mapeado corretamente.
+
+========
+
 O \textit{Epidural Haptic Game Simulator}, EHGS \cite{Brazil2017}, utilizou um dispositivo háptico Phantom Omni e fez uso de elementos de jogos para trazer mais motivação para os usuários. Dentre os elementos de jogos estão presentes a divisão de etapas e atribuição de pontuação dada como \textit{feedback} para o usuário pela execução correta das tarefas envolvidas no procedimento de punção epidural. A simulação da técnica de LOR foi feita através da exibição de valores na tela ao clicar sobre um botão do háptico simulando o pressionamento do êmbolo da seringa. É possível escolher o ponto e ângulo de inserção da agulha. Não existe a opção de palpação da coluna para descoberta do local correto para efetuação da punção. Foi implementado um modelo de cálculo da espessura dos tecidos conforme peso, altura e idade do paciente de acordo com estudos em parturientes. A modelagem de forças de rigidez, atrito e corte necessárias para inserção e progresso da agulha nos tecidos foi desenvolvida com base em estudos destas forças para inserção de agulhas em tecidos de porcos e humanos. A ferramenta também disponibiliza uma forma manual de alteração destes parâmetros permitindo assim uma customização destas forças segundo as sensações do especialista. A Figura \ref{fig:brasilSimulator} mostra a interface do simulador EHGS em detalhes com o retorno de pontos obtidos, o tecido sendo perfurado no momento, a profundidade da ponta da agulha, as forças medidas e ângulo da agulha. É possível inserir a agulha na abordagem mediana e na paramediana porém, pela simplificação da modelagem das camadas, a agulha inserida na abordagem paramediana necessariamente irá perfurar as mesmas camadas da abordagem mediana o que não é o correto.  
 
 \begin{figure}[ht!]
@@ -215,6 +229,7 @@ Um resumo das características importantes nos simuladores epidurais computacion
  Spinal Anaesthesia simulator & 2006 & 3D & ER  & N & S &  & S & N & S & MP \\
  EpiSim & 2008 & 3D & E & N & N & Múltiplas & S & N & N &  \\
  Simulador de punção lombar de Färber & 2009 & 3D & ER  & S & S & 3 & S & N & S & MP \\
+  Simulador epidural de Dubey & 2013 & 3D & E & N & S & Múltiplas & N & N & S & MP \\
  Epidural Haptic Game Simulator & 2017 & 3D & E & N & S & Múltiplas & S & N & S & MP \\
 \hline
 \end{tabular}
