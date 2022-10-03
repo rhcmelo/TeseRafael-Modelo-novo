@@ -17,7 +17,7 @@ A seguir serão apresentados os simuladores de punções mais completos. Primeir
 
 Os simuladores baseados em \textit{phantoms} (ou manequins) mais completos são discutidos aqui com suas principais características. As características positivas devem idealmente ser contempladas ou até melhoradas em novos simuladores. Todas as soluções listadas estão disponíveis atualmente. Elas permitem ao menos a simulação da anestesia peridural, possuem a coluna fisicamente palpável e permitem a escolha do ponto e ângulo de inserção da agulha. Todos esses trabalhos permitem que o procedimento seja feito com o paciente sentado ou deitado e o escoamento do fluido cérebro espinhal é simulado ao perfurar a dura-máter. É possível escolher o ponto de inserção em todos estes simuladores.
 
-A solução \textit{SimULab Lumbar Epidural Trainer} possui até 3 variações de pacientes (normal, idoso e obeso). A Figura \ref{fig:simuladorSimulab} ilustra o uso deste simulador. O material deste manequim foi produzido de forma a permitir o uso deste equipamento \cite{SimulabCorporation2008}. Este simulador permite somente a anestesia epidural e foi incluído aqui por que esta anestesia possui algumas similaridades com as anestesias raquidianas. 
+A solução \textit{SimULab Lumbar Epidural Trainer} possui até 4 variações de pacientes (normal, idoso e obeso e obeso idoso). A Figura \ref{fig:simuladorSimulab} ilustra o uso deste simulador. O material deste manequim foi produzido de forma a permitir o uso deste equipamento \cite{SimulabCorporation2008}. Este simulador permite somente a anestesia epidural e foi incluído aqui por que esta anestesia possui algumas similaridades com as anestesias raquidianas. 
 
 \begin{figure}[ht!]
     \centering
@@ -79,6 +79,8 @@ Outro simulador que também possibilita anestesias epidurais e raquidianas é o 
     \label{fig:M43ESimulator}
 \end{figure}
 
+\texxtcite{Mashari2018} testou o uso de um manequim de baixo custo impresso em impressora 3D com material que permite o uso de ultrassom. No teste ele foi comparado por 21 anestesistas com o modelo de paciente normal do simulador comercial \textit{SimULab Lumbar Epidural Trainer}. As respostas dos participantes demonstraram resultados comparáveis tendo avaliações mais baixas somente no teste da apalpação. O modelo impresso foi criado a partir de imagens de \acrshort{TC} segmentadas e posteriormente modeladas pelos autores. Este modelo carece de variabilidade, pois simula apenas um modelo de corpo para cada manequim impresso. Esta variabilidade pode ser obtida com um trabalho de obtenção, segmentação e modelagem de diversas imagens médicas referentes a pacientes com características físicas distintas.
+
 A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de características importantes destes simuladores. Durante as pesquisas encontramos outros simuladores que não foram descritos aqui por possuírem  características muitos similares ou serem menos abrangentes dos mencionados aqui.
 
 \begin{table}[!ht]
@@ -91,18 +93,19 @@ A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de caracterí
   Nome do simulador & 
   \rotatebox{90}{Ano de desenvolvimento} & 
   \rotatebox{90}{Epidural (E) Raquianestesia (R)} & 
-  \rotatebox{90}{Testado em hospital} & 
+  \rotatebox{90}{Testado por especialistas} & 
   \rotatebox{90}{Permite o uso de ultrassom} & 
   \rotatebox{90}{Variabilidade de pacientes} & 
   \rotatebox{90}{Coluna palpável} & 
   \rotatebox{90}{Escolha do ponto de inserção da agulha }  & 
   \rotatebox{90}{Abordagens mediana (M) e paramediana (P)} \\
 \hline\hline
- SimULab Lumbar Epidural Trainer & 2008 & E & N & S & 3 & S & S & MP \\
+ SimULab Lumbar Epidural Trainer & 2008 & ER & N & S & 4 & S & S & MP \\
  Nasco Life/form® Spinal Injection Sim & 2008 & ER & N & N & 3 & S & S & MP \\
  {\begin{tabular}[c]{@{}c@{}}Blue Phantom Lumbar Puncture\\ and Spinal Epidural\end{tabular}} & 2011 & ER & N & S & 2 & S & S & MP \\
  S411 Lumbar Puncture Trainer & 2011 & ER & N & N & 1 & S & S & M\\
  \begin{tabular}[c]{@{}c@{}}M43E Ultrasound Compatible Lumbar\\ Puncture/Epidural Simulator\end{tabular}} & 2015 & ER & S & S & 4 & S & S & MP \\
+ Manequim de baixo custo de Mashari & 2018 & ER & S & S & 4 & S & S & MP \\
 \hline
 \end{tabular}
 \end{center}
@@ -188,13 +191,9 @@ Um simulador de punção lombar criado por \textcite{Farber2008}  possui, além 
     \label{fig:dubeySimSistema}
 \end{figure}
 
-===== COLOCAR IMAGEM ====
+=========
 
-Já um outro simulador comercial foi testado por 45 anestesistas apresentando um bom \textit{feedback} sobre a qualidade da simulação em muitos aspectos. No entanto, este simulador carecia de realismo nas questões relativas ao ponto de entrada e ângulo correto de inserção da agulha \cite{Lee2012}, que são elementos críticos no procedimento real. O ponto de entrada da agulha também estava fora do escopo de um simulador acoplado a um cilindro pneumático. Este simulador foi testado por oito usuários (dois experientes e seis novatos), com foco na avaliação das habilidades do usuário através do simulador ao invés da validação do simulador em si \cite{Senac2019}. 
-
-Outro estudo testou o uso de um manequim de baixo custo impresso em impressora 3D contra um simulador comercial com resultados comparáveis (teste subjetivo). No entanto, este modelo carece de variabilidade, pois simula apenas um modelo de corpo para cada manequim impresso \cite{Mashari2018}. 
-
-Assim, para construir critérios mais objetivos, nesta tese focamos nossos experimentos em fazer perguntas com respostas esperadas em vez de questionários para validar as opiniões dos usuários. As respostas indicam se um comportamento específico pode ser mapeado corretamente.
+O ponto de entrada da agulha também estava fora do escopo de um simulador acoplado a um cilindro pneumático. Este simulador foi testado por oito usuários (dois experientes e seis novatos), com foco na avaliação das habilidades do usuário através do simulador ao invés da validação do simulador em si \cite{Senac2019}. 
 
 ========
 
