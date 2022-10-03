@@ -191,12 +191,6 @@ Um simulador de punção lombar criado por \textcite{Farber2008}  possui, além 
     \label{fig:dubeySimSistema}
 \end{figure}
 
-=========
-
-O ponto de entrada da agulha também estava fora do escopo de um simulador acoplado a um cilindro pneumático. Este simulador foi testado por oito usuários (dois experientes e seis novatos), com foco na avaliação das habilidades do usuário através do simulador ao invés da validação do simulador em si \cite{Senac2019}. 
-
-========
-
 O \textit{Epidural Haptic Game Simulator}, EHGS \cite{Brazil2017}, utilizou um dispositivo háptico Phantom Omni e fez uso de elementos de jogos para trazer mais motivação para os usuários. Dentre os elementos de jogos estão presentes a divisão de etapas e atribuição de pontuação dada como \textit{feedback} para o usuário pela execução correta das tarefas envolvidas no procedimento de punção epidural. A simulação da técnica de LOR foi feita através da exibição de valores na tela ao clicar sobre um botão do háptico simulando o pressionamento do êmbolo da seringa. É possível escolher o ponto e ângulo de inserção da agulha. Não existe a opção de palpação da coluna para descoberta do local correto para efetuação da punção. Foi implementado um modelo de cálculo da espessura dos tecidos conforme peso, altura e idade do paciente de acordo com estudos em parturientes. A modelagem de forças de rigidez, atrito e corte necessárias para inserção e progresso da agulha nos tecidos foi desenvolvida com base em estudos destas forças para inserção de agulhas em tecidos de porcos e humanos. A ferramenta também disponibiliza uma forma manual de alteração destes parâmetros permitindo assim uma customização destas forças segundo as sensações do especialista. A Figura \ref{fig:brasilSimulator} mostra a interface do simulador EHGS em detalhes com o retorno de pontos obtidos, o tecido sendo perfurado no momento, a profundidade da ponta da agulha, as forças medidas e ângulo da agulha. É possível inserir a agulha na abordagem mediana e na paramediana porém, pela simplificação da modelagem das camadas, a agulha inserida na abordagem paramediana necessariamente irá perfurar as mesmas camadas da abordagem mediana o que não é o correto.  
 
 \begin{figure}[ht!]
@@ -205,6 +199,16 @@ O \textit{Epidural Haptic Game Simulator}, EHGS \cite{Brazil2017}, utilizou um d
     \caption{Interface do simulador EHGS \cite{Brazil2017}.}
     \label{fig:brasilSimulator}
 \end{figure}
+
+No simulador epidural desenvolvido por \textcite{Senac2019} o objetivo principal foi a representação fiel das sensações durante a inserção da agulha incluindo a \acrshort{LoR} em detrimento da parte visual (o que pode ser observado na Figura \ref{fig:senacSim}). O ponto de entrada da agulha assim como as abordagens de inserção deste estavam portanto fora do escopo deste simulador. Ele foi testado por oito anestesistas (dois experientes e seis novatos). O foco foi na avaliação do nível de habilidade do usuário através da gravação do seu uso do simulador. Três tipos de paciente foram criados neste simulador (normal, obeso e calcificado). As dimensões dos pacientes foram configuradas a partir de imagens de \acrshort{RM} e as forças a partir do trabalho de \textcite{Tran2009}.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{capitulos/figuras/Senac-ES.png} 
+    \caption{Interface do simulador Epidural de Senac \cite{Senac2019}.}
+    \label{fig:senacSim}
+\end{figure}
+
 
 Um resumo das características importantes nos simuladores epidurais computacionais pode ser vista na Tabela \ref{tab:comparacaoSimuladoresComputacionais}.
 
@@ -219,7 +223,7 @@ Um resumo das características importantes nos simuladores epidurais computacion
   \rotatebox{90}{Ano de desenvolvimento} & 
   \rotatebox{90}{Realidade virtual} & 
   \rotatebox{90}{Epidural (E) Raquianestesia (R)} & 
- \rotatebox{90}{Testado em hospital} & 
+ \rotatebox{90}{Testado por especialistas} & 
   \rotatebox{90}{Baseado em dados medidos} & 
   \rotatebox{90}{Variabilidade de pacientes} & 
   \rotatebox{90}{Feedback para o usuário} & 
@@ -235,6 +239,7 @@ Um resumo das características importantes nos simuladores epidurais computacion
  Simulador de punção lombar de Färber & 2009 & 3D & ER  & S & S & 3 & S & N & S & MP \\
   Simulador epidural de Dubey & 2013 & 3D & E & N & S & Múltiplas & N & N & S & MP \\
  Epidural Haptic Game Simulator & 2017 & 3D & E & N & S & Múltiplas & S & N & S & MP \\
+ Simulador epidural de Senac & 2019 & N & E & S & S & 3 & N & N & N &  \\
 \hline
 \end{tabular}
 \end{center}
