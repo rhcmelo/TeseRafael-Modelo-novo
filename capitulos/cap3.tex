@@ -209,18 +209,18 @@ No simulador epidural desenvolvido por \textcite{Senac2019} o objetivo principal
     \label{fig:senacSim}
 \end{figure}
 
-USEIT é o acrônimo em inglês do simulador epidural baseado em \textiti{Unity} para treinamento desenvolvido por \texcite{Moo-Young2021}. Os autores fizeram uso do dispositivo háptico \textiti{Novint Falcon} com uma customização para conexão da agulha epidural. Também desenvolveram uma customização adicional onde usaram Arduino e uma válvula manual de forma a simular o efeito de \acrshort{LoR} através da seringa. Estas duas customizações podem ser observadas na Figura \ref{fig:useitSim} que ilustra um usuário efetuando um procedimento no simulador. O ambiente virtual que remete a uma sala de operação como pode ser visto na Figura \ref{fig:useitSimAmbienteVirtual}. Como também fica claro nesta figura a aplicação de transparência nas camadas é possível neste simulador.  
+USEIT é o acrônimo em inglês do simulador epidural baseado em \textiti{Unity} para treinamento desenvolvido por \texcite{Moo-Young2021}. Os autores fizeram uso do dispositivo háptico \textiti{Novint Falcon} com uma customização para conexão da agulha epidural. Também desenvolveram uma customização adicional onde usaram Arduino e uma válvula manual de forma a simular o efeito de \acrshort{LoR} através da seringa. Estas duas customizações podem ser observadas na Figura \ref{fig:useitSim} que ilustra um usuário efetuando um procedimento no simulador. Apesar das customizações aumentarem o realismo na execução do procedimento, a existência delas impediu a inclusão da apalpação neste simulador. Os autores comentaram que para possibilitar a apalpação seria necessário aumentar a complexidade de montagem do sistema por parte dos usuários. O ambiente virtual remete a uma sala de operação como pode ser visto na Figura \ref{fig:useitSimAmbienteVirtual}. Nesta figura também fica claro que a aplicação de transparência nas camadas é possível neste simulador. O intestino delgado e os rins estão presentes no modelo 3D do paciente o que é um diferencial deste em relação aos demais simuladores porém os autores não comentam a possibilidade de variação de espessuras dos tecidos no modelo 3D do paciente. Como esta variabilidade não foi informada consideramos assumimos que o modelo é fixo e não adaptável. Como \textit{feedback} são apresentadas métricas de avaliação do desempenho após a simulação.
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.6\linewidth]{capitulos/figuras/USEIT-uso.png} 
+    \includegraphics[width=0.7\linewidth]{capitulos/figuras/USEIT-uso.png} 
     \caption{Visão geral do uso do USEIT com as customizações visíveis \cite{Moo-Young2021}.}
     \label{fig:useitSim}
 \end{figure}
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.6\linewidth]{capitulos/figuras/USEIT-visao-geral.png} 
+    \includegraphics[width=0.7\linewidth]{capitulos/figuras/USEIT-visao-geral.png} 
     \caption{Ambiente virtual do USEIT \cite{Moo-Young2021}.}
     \label{fig:useitSimAmbienteVirtual}
 \end{figure}
@@ -252,10 +252,10 @@ Um resumo das características importantes nos simuladores de anestesias regiona
  Spinal Anaesthesia simulator & 2006 & 3D & ER  & N & S &  & S & N & S & MP \\
  EpiSim & 2008 & 3D & E & N & N & Múltiplas & S & N & N &  \\
  Simulador de punção lombar de Färber & 2009 & 3D & ER  & S & S & 3 & S & N & S & MP \\
-  Simulador epidural de Dubey & 2013 & 3D & E & N & S & Múltiplas & N & N & S & MP \\
+ Simulador epidural de Dubey & 2013 & 3D & E & N & S & Múltiplas & N & N & S & MP \\
  Epidural Haptic Game Simulator & 2017 & 3D & E & N & S & Múltiplas & S & N & S & MP \\
  Simulador epidural de Senac & 2019 & N & E & S & S & 3 & N & N & N &  \\
- USEIT & 2021 & N & E & S & S & 3 & N & N & N &  \\
+ USEIT & 2021 & 3D & E & N & N & 1 & S & N & S & MP \\
 \hline
 \end{tabular}
 \end{center}
