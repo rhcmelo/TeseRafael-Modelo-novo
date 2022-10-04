@@ -162,9 +162,9 @@ Para configuração do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014}, \t
 
 % === FALAR sobre associações de scripts Haptic Injection, Generic Functions Class?
 
-\section {Etapas da simulação}
+\section {Etapas do ambiente virtual de treinamento}
 
-O simulador ao ser iniciado apresenta uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário deve então usar o dispositivo háptico para interagir com o ambiente virtual. Ao ser iniciado o sistema e a cada inicio de procedimento em uma nova paciente ao movimentar o dispositivo háptico o item que representa o dedo é movimentado no ambiente virtual de treinamento. O item no ambiente 3D que representa o dedo pode ser observado na Figura~\ref{fig:elementosDeInteracao} (a) do lado direito do tronco da paciente. Outro item a ser observado nesta imagem é uma esfera azul que indica onde foi o último toque do dedo no corpo da paciente. O último ponto tocado foi a estratégia definida para determinação da escolha do ponto de inserção da agulha na simulação. Nas Figuras~\ref{fig:elementosDeInteracao} (b) e (c) estão atrás do tronco da paciente respectivamente a seringa para anestesia local e a agulha usada para aplicação da raquianestesia. No momento da aplicação da raquianestesia uma seringa é conectada no final da agulha como pode ser visto pela visão lateral na Figura~\ref{fig:agulhaRaquiSeringa}.
+Ao ser iniciado o sistema apresenta ao usuário uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário deve então usar o dispositivo háptico para interagir com o ambiente virtual. Ao ser iniciado o sistema e a cada inicio de procedimento em uma nova paciente ao movimentar o dispositivo háptico o item que representa o dedo é movimentado no ambiente virtual de treinamento. O item no ambiente 3D que representa o dedo pode ser observado na Figura~\ref{fig:elementosDeInteracao} (a) do lado direito do tronco da paciente. Outro item a ser observado nesta imagem é uma esfera azul que indica onde foi o último toque do dedo no corpo da paciente. O último ponto tocado foi a estratégia definida para determinação da escolha do ponto de inserção da agulha na simulação. Nas Figuras~\ref{fig:elementosDeInteracao} (b) e (c) estão atrás do tronco da paciente respectivamente a seringa para anestesia local e a agulha usada para aplicação da raquianestesia. No momento da aplicação da raquianestesia uma seringa é conectada no final da agulha como pode ser visto pela visão lateral na Figura~\ref{fig:agulhaRaquiSeringa}.
 
 \begin{figure}[ht!]
     \centering
@@ -250,4 +250,27 @@ Após os cinco procedimentos efetuados, uma vez que três deles tiveram notas ac
     \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-5.png} 
     \caption{Tela do sistema após finalização de um quinto procedimento onde só não foi feita a apalpação para determinação do ponto de inserção da agulha.}
     \label{fig:sistemaExecucao5semApalpacaoCorreto}
+\end{figure}
+
+Inserimos no sistema uma opção de execução que guia o usuário mais inexperiente nas etapas da raquianestesia que estão disponíveis no ambiente de treinamento desenvolvido. Essa opção foi denominada de tutorial. Ao ser ativada através do botão de nome tutorial na área inferior a esquerda da tela a transparência do corpo da paciente é habilitada e textos explicativos da etapa atual de cada procedimento são exibidos na área superior a esquerda da tela como pode ser visto nas Figuras \ref{fig:sistemaExecucaoTutorialApalpacao}, \ref{fig:sistemaExecucaoTutorialAnestesiaLocal} e \ref{fig:sistemaExecucaoTutorialRaqui}. Nos textos destas telas na primeira linha é identificado o elemento de interação que está atualmente selecionado no ambiente virtual. Figura \ref{fig:sistemaExecucaoTutorialApalpacao}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoTutorialApalpacao.png} 
+    \caption{Tela do sistema no modo tutorial no início do procedimento.}
+    \label{fig:sistemaExecucaoTutorialApalpacao}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoTutorialAnestesiaLocal.png} 
+    \caption{Tela do sistema no modo tutorial após a escolha do ponto de inserção da agulha via apalpação.}
+    \label{fig:sistemaExecucaoTutorialAnestesiaLocal}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoTutorialRaqui.png} 
+    \caption{Tela do sistema no modo tutorial após a anestesia local ter sido efetuada.}
+    \label{fig:sistemaExecucaoTutorialRaqui}
 \end{figure}
