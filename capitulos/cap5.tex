@@ -1,6 +1,12 @@
-\chapter{Testes de simulação} \label{cap:cap5}
+\chapter{Testes} \label{cap:cap5}
 
-Foram feitas avaliações das sensações proporcionadas pelo háptico como parte do projeto aprovado no comitê de ética do Hospital Universitário Antônio Pedro associado a faculdade de medicina da Universidade Federal Fluminense. Este projeto foi registrado na Plataforma Brasil do ministério da saúde sob o número 23637019.5.0000.5243 (texto no apêndice \ref{apend:comiteEtica}). A descrição destes experimentos e discussão dos resultados obtidos foram publicados em conferência da área \cite{Melo2021}.
+Foram feitos testes em três fases distintas do desenvolvimento do ambiente de simulação aqui desenvolvido. 
+Todas como parte do projeto aprovado no comitê de ética do Hospital Universitário Antônio Pedro associado a faculdade de medicina da Universidade Federal Fluminense. Este projeto foi registrado na Plataforma Brasil do ministério da saúde sob o número 23637019.5.0000.5243 (texto no apêndice \ref{apend:comiteEtica}). A primeira fase de testes envolveu avaliações das sensações proporcionadas pelo dispositivo háptico. A segunda e a terceira fase foram feitas em paralelo com todo o ambiente de simulação já desenvolvido. A segunda fase foi um teste de usabilidade e a terceira uma avaliação do ambiente como um todo por especialistas.
+
+\section{Simulação das sensações}
+\label{sec:testeSensacoes}
+
+Esta seção detalha os experimentos para avaliação do correto reconhecimento das sensações hápticas necessárias de serem simuladas para a reprodução do procedimento de raquianestesia. Os resultados destes experimentos são descritos ao final. A descrição destes experimentos e discussão dos resultados obtidos foram publicados em conferência da área \cite{Melo2021}. 
 
 Os experimentos foram apresentados a doze voluntários que fizeram uso do equipamento háptico, todos estes voluntários eram estudantes de ciência da computação com idades variando entre 18 e 44 anos sendo onze homens e uma mulher. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico no experimento. Em seguida tiveram outros cinco minutos de tempo para usar um aplicativo de exemplo (para adquirir conhecimento sobre como interagir num ambiente com este tipo de dispositivo) visando nivelar o conhecimento. Para construir critérios mais objetivos, nesta tese focamos nossos experimentos em fazer perguntas com respostas esperadas em vez de questionários para validar as opiniões dos usuários. As respostas indicam se um comportamento específico pode ser mapeado corretamente.
 
@@ -97,7 +103,7 @@ O ponto de referência considerado para a interface da primeira camada em cada e
 
 A quantidade de camadas de cada experimento proposto aqui difere do número original de camadas do procedimento descrito na seção~\ref{sec:anestesiaRaquidiana}. Isto por que a ideia não foi representar todo o corpo ou procedimento. A ideia é reproduzir, nos experimentos, as sensações mais importantes e críticas envolvidas neste procedimento. As outras interfaces entre as camadas são simples reproduções de partes das que foram incluídas nestes experimentos.
 
-\section{Questionário}
+\subsection{Questionário}
 \label{sec:questionario}
 
 Entre os testes com a ferramenta de nivelamento no uso do háptico e o início do experimento os questionários com as perguntas de cada experimento foram apresentados para os usuários. Isto foi feito de forma que durante o experimentos cada um pudesse coletar as informações necessárias para responder cada pergunta. Apresentamos a seguir as perguntas que foram apresentadas para os voluntários.
@@ -119,7 +125,7 @@ Exemplo: Entre 10mm e 20mm.
 
 Todas as perguntas envolvem aspectos de identificação tátil vitais na realização de uma raquianestesia. Os exemplos de resposta foram ilustrados com o intuito de facilitar a posterior análise das respostas procurando evitar excessos de descrições desnecessárias. A identificação do comportamento elástico é avaliado nas questões 1, 3 e 5 enquanto a questão 4 trata da identificação do comportamento plástico. A questão que envolve a identificação da posição inicial (3) assim como as que pedem a identificação de intervalos de comportamentos (4 e 5) sofrem impacto do deslocamento das interfaces de cada camada via deformação. Todas as camadas iniciam na sua posição de origem e apresentam um deslocamento por deformação imediatamente antes da perfuração que alteram esta posição. Para fins de avaliação, consideramos corretas as respostas entre o ponto inicial e o ponto final de deslocamento pela deformação nas identificações de interface de cada camada.  
 
-\section{Respostas}
+\ubsection{Respostas}
 \label{sec:respostas}
 
 Nesta seção apresentamos uma compilação das respostas dos participantes às perguntas de cada experimento. Para o primeiro
@@ -139,17 +145,17 @@ Questão 4) Nove voluntários (75\%) responderam corretamente.
 
 Questão 5) Oito voluntários (aproximadamente 67\%) responderam corretamente. Nove (75\%) acertaram o início.
 
-\section{Avaliação dos resultados}
+\subsection{Avaliação dos resultados}
 \label{sec:avaliacao}
 
 Nesta seção detalhamos cada um dos comportamentos mais importantes do procedimento coberto nestes experimentos que foram criados para avaliar a percepção do usuário sobre o comportamento das
 camadas virtuais sendo perfuradas por uma agulha.
 
-\subsection{Resistência à punção}
+\subsubsection{Resistência à punção}
 
 Considerando os sentimentos ou sensações de resistência à punção (o assunto da questão dois), apenas 58\% dos respondentes ordenaram corretamente todas as camadas de acordo com suas resistências. Este resultado indica a necessidade de se aumentar a diferença na força necessária para perfurar cada camada para permitir uma identificação mais facilitada de todas estas características. É importante ressaltar aqui que esta seria uma solução a ser considerada se o público alvo destes experimentos tivesse sido de anestesistas experientes fazendo a avaliação do sentimento tátil de cada camada em relação ao que estes vivenciam nos procedimentos pacientes reais. Na mesma pergunta, um número maior de voluntários identificaram a camada mais resistente ou a menos resistente à perfuração. Essa identificação é essencial para indicar quando a agulha penetra no ligamento amarelo (tecido mais resistente) ou a dura-máter (tecido menos resistente). Como estas duas camadas estão posicionadas no corpo humano uma após a outra (considerando o ângulo de perfuração correto), a correta identificação de uma é, por si só, um passo essencial na simulação correta do procedimento de raquianestesia.
 
-\subsection{Comportamento elástico}
+\subsubsection{Comportamento elástico}
 
 Quanto à identificação do comportamento elástico (questões 1, 3 e 5), apenas a questão cinco recebeu pontuação inferior a 75\%. No entanto, mesmo nesta questão, apenas três voluntários apontaram erroneamente o ponto de partida do intervalo com maior restrição ao movimento da agulha, ou seja, 75\% acertaram onde esta camada começa. Considerando somente os participantes que acertaram o ponto de partida apenas um deles identificou erroneamente o ponto final desta camada. 
 
@@ -157,8 +163,20 @@ Tivemos ótimas respostas na detecção do número de camadas (questão um) em t
 
 Quanto à identificação do ponto de início de cada camada (questão três) também é importante destacar o número de casos corretamente identificados (75\%). Esta resposta reforça a necessidade de utilização de valores de profundidade desde a pele até o espaço subaracnóide próximo da realidade para treinar melhor os anestesistas. Cada ponto de partida da camada está relacionado com o início do comportamento elástico e é necessário aumentar a força para prosseguir com o avanço da agulha em cada interface entre camadas. 
 
-\subsection{Comportamento plástico}
+\subsubsection{Comportamento plástico}
 
 A questão quatro, com 75\% de sucesso na identificação, aborda um outro comportamento de grande importância na raquianestesia. A identificação de estar no interior da camada que apresenta a maior
 resistência, ou seja, sentir uma força de resistência constante contra o movimento através da camada (comportamento plástico), está relacionado ao ligamento amarelo, que ocorre imediatamente antes de se atingir o espaço peridural. As respostas a esta pergunta
 confirmam que esse comportamento pode ser simulado adequadamente.
+
+\section{Testes de usabilidade}
+\label{sec:testeUsabilidade}
+
+Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. A ideia com isto foi a de não frustrar os voluntários dos testes mesmo que previamente informando a eles que o desempenho deles em relação a correta execução do procedimento não estava em avaliação. Particularmente esta decisão aparentou ter sido acertada uma vez que alguns voluntários mesmo assim aparentavam alguma frustração quando tinham dificuldade com a execução do procedimento e quando recebiam notas baixas pela sua execução.
+
+=================
+Os experimentos foram apresentados a doze voluntários que fizeram uso do equipamento háptico, todos estes voluntários eram estudantes de ciência da computação com idades variando entre 18 e 44 anos sendo onze homens e uma mulher. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico no experimento. Em seguida tiveram outros cinco minutos de tempo para usar um aplicativo de exemplo (para adquirir conhecimento sobre como interagir num ambiente com este tipo de dispositivo) visando nivelar o conhecimento. Para construir critérios mais objetivos, nesta tese focamos nossos experimentos em fazer perguntas com respostas esperadas em vez de questionários para validar as opiniões dos usuários. As respostas indicam se um comportamento específico pode ser mapeado corretamente.
+========================
+
+\section{Avaliações com especialistas}
+\label{sec:testeEspecialistas}
