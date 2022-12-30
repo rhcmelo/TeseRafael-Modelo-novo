@@ -125,7 +125,7 @@ Exemplo: Entre 10mm e 20mm.
 
 Todas as perguntas envolvem aspectos de identificação tátil vitais na realização de uma raquianestesia. Os exemplos de resposta foram ilustrados com o intuito de facilitar a posterior análise das respostas procurando evitar excessos de descrições desnecessárias. A identificação do comportamento elástico é avaliado nas questões 1, 3 e 5 enquanto a questão 4 trata da identificação do comportamento plástico. A questão que envolve a identificação da posição inicial (3) assim como as que pedem a identificação de intervalos de comportamentos (4 e 5) sofrem impacto do deslocamento das interfaces de cada camada via deformação. Todas as camadas iniciam na sua posição de origem e apresentam um deslocamento por deformação imediatamente antes da perfuração que alteram esta posição. Para fins de avaliação, consideramos corretas as respostas entre o ponto inicial e o ponto final de deslocamento pela deformação nas identificações de interface de cada camada.  
 
-\ubsection{Respostas}
+\subsection{Respostas}
 \label{sec:respostas}
 
 Nesta seção apresentamos uma compilação das respostas dos participantes às perguntas de cada experimento. Para o primeiro
@@ -172,18 +172,118 @@ confirmam que esse comportamento pode ser simulado adequadamente.
 \section{Testes de usabilidade}
 \label{sec:testeUsabilidade}
 
-Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. A ideia com isto foi a de não frustrar os voluntários dos testes mesmo que previamente informando a eles que o desempenho deles em relação a correta execução do procedimento não estava em avaliação. Particularmente esta decisão aparentou ter sido acertada uma vez que alguns voluntários mesmo assim aparentavam alguma frustração quando tinham dificuldade com a execução do procedimento e quando recebiam notas baixas pela sua execução.
+Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. 
+============ Esta simplificação foi feita através da   ==========================
+A ideia com isto foi a de não frustrar os voluntários dos testes mesmo que previamente informando a eles que o desempenho deles em relação a correta execução do procedimento não estava em avaliação. Particularmente esta decisão se demonstrou ter sido acertada uma vez que alguns voluntários mesmo com essa simplificação aparentavam alguma frustração quando tinham dificuldade na execução do procedimento até o final e quando recebiam notas baixas pela sua execução. Importante ressaltar que todos os voluntários foram orientados que não era necessário executar corretamente o procedimento uma vez que eles não possuíam o conhecimento necessário para tal. Todos os testes foram efetuados nas dependências do instituto de computação da Universidade Federal Fluminense com participação de alunos de graduação, mestrado e doutorado.
 
+O ambiente de treinamento simplificado foi apresentado a sessenta e dois voluntários que fizeram uso do equipamento háptico, todos estes voluntários eram estudantes de ciência da computação com idades variando entre 18 e 58 anos sendo cinquenta homens e doze mulheres. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. A montagem do equipamento foi feita conforme ilustrado na Figura~\ref{fig:montagemTesteUsabilidade} e só teve uma pequena variação com alternância do lado do dispositivo háptico quando o voluntário era canhoto.
 
-O ambiente de treinamento simplificado foi apresentado a sessenta e dois voluntários que fizeram uso do equipamento háptico, todos estes voluntários eram estudantes de ciência da computação com idades variando entre 18 e 58 anos sendo cinquenta homens e doze mulheres. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\linewidth]{capitulos/figuras/montagem-teste-usabilidade.jpg} 
+    \caption{Montagem do ambiente de treinamento em uso durante os testes de usabilidade.}
+    \label{fig:montagemTesteUsabilidade}
+\end{figure}
 
 =================
 Para possibilitar testes comparativos -- critérios mais objetivos, nesta tese focamos nossos experimentos em fazer perguntas com respostas esperadas em vez de questionários para validar as opiniões dos usuários. As respostas indicam se um comportamento específico pode ser mapeado corretamente.
 ========================
 
+\subsection{Questionário}
+\label{sec:questionarioUsabilidade}
+
+Após a execução dos procedimentos por cada voluntário usando o ambiente de simulação para treinamento simplificado um questionário foi apresentado para os usuários. As perguntas apresentadas para os voluntários estão descritas a seguir. As respostas foram coletadas em sua maioria (de um a onze) usando a escala \textit{likert} variando de 1 (Discordo fortemente) até 5 (Concordo fortemente). As dez primeiras perguntas foram feitas baseadas no SUS [[[citar aqui]]] para uma avaliação quantitativa da usabilidade. A décima primeira pergunta foi incluída para ter um retorno a respeito do modo tutorial desenvolvido no sistema. A décima segunda questão foi uma pergunta pra resposta textual a respeito de sugestões de possíveis melhorias.
+
+\subsection{Respostas}
+\label{sec:respostasUsabilidade}
+
+Nesta seção apresentamos uma compilação das respostas dos participantes às perguntas do questionário.
+
+Questão 1) 
+
+Questão 11) O \textit{feedback} do modo tutorial esclarece dúvidas sobre a sequência de ações a ser executada.
+
+Questão 12) Você tem alguma sugestão de alterações na interface que poderiam melhorar a usabilidade? Se sim, comente.
+
+\subsection{Avaliação dos resultados}
+\label{sec:avaliacaoUsabilidde}
+
 \section{Avaliações com especialistas}
 \label{sec:testeEspecialistas}
 
-Esta seção detalha as avaliações do ambiente de treinamento completo desenvolvido nesta tese por especialistas. Para possibilitar uma maior adesão.
+Esta seção detalha as avaliações do ambiente de treinamento completo desenvolvido nesta tese por especialistas. Para possibilitar uma maior adesão todos os testes com especialistas foram feitos nas dependências do Hospital Universitário Antônio Pedro na secretaria do centro cirúrgico com anuência de todos os responsáveis.
 
-O ambiente de treinamento simplificado foi apresentado a dez voluntários que fizeram uso do equipamento háptico, nove destes voluntários eram anestesistas e um era residente de anestesia com idades variando entre 35 e 54 anos sendo cinco homens e cinco mulheres. Cinco tinham até três anos de experiência em anestesia raquidiana, três tinham por volta de 10 anos de experiência e dois deles tinham mais de 20 anos com este tipo de anestesia. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. 
+O ambiente de treinamento simplificado foi apresentado a dez voluntários que fizeram uso do equipamento háptico, nove destes voluntários eram anestesistas e um era residente de anestesia com idades variando entre 35 e 54 anos sendo cinco homens e cinco mulheres. Cinco tinham três anos ou menos de experiência em anestesia raquidiana, três tinham por volta de dez anos de experiência e dois deles tinham vinte dois anos com este tipo de anestesia. A frequência mensal de execução deste procedimento entre os voluntários variou entre seis e vinte procedimentos em média. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. 
+
+É importante ressaltar aqui que foi feita uma montagem inicial para execução dos procedimentos como na Figura~\ref{fig:montagemTesteUsabilidade}, porém alguns especialistas questionaram esta montagem por informarem que aquela posição não é a que eles tem o costume de executar o procedimento. Com isto adaptamos a montagem às posições preferidas de cada voluntário que fez este questionamento procurando se aproximar ao máximo do posição real de execução deles. As Figuras~\ref{fig:montagemTesteEspecialistasInicial} e \ref{fig:montagemTesteEspecialistas2e3} são exemplos das montagem que fizemos para execução dos procedimentos pelos especialistas. Na Figura~\ref{fig:montagemTesteEspecialistasInicial} está a nossa sugestão inicial, a Figura~\ref{fig:montagemTesteEspecialistas2e3} (a) mostra montagem de acordo com a preferência da voluntária em executar o procedimento de pé e a Figura~\ref{fig:montagemTesteEspecialistas2e3} (b) ilustra a montagem sugerida pelo voluntário para posicionamento do equipamento háptico que simula a agulha em frente ao ambiente virtual que simula o paciente.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\linewidth]{capitulos/figuras/montagem-teste-especialistas-1.jpg} 
+    \caption{Montagem do ambiente de treinamento em uso durante as avaliações com especialistas na posição sugerida inicial.}
+    \label{fig:montagemTesteEspecialistasInicial}
+\end{figure}
+
+
+\begin{figure}[ht!]
+    \centering
+        \begin{tabular}{cc}
+        \includegraphics[angle=270,width=0.4\linewidth]{capitulos/figuras/montagem-teste-especialistas-2.jpg} & 
+        \includegraphics[angle=270,width=0.4\linewidth]{capitulos/figuras/montagem-teste-especialistas-3.jpg} 
+        \\
+        (a) & (b)
+        \end{tabular}
+    \caption{Montagem do ambiente de treinamento em uso durante as avaliações com especialistas com posicionamento adaptado a preferência dos voluntários: (a) Para uso em pé (b) Com dispositivo háptico a frente do computador simulando a agulha em frente ao paciente.}
+    \label{fig:montagemTesteEspecialistas2e3}
+\end{figure}
+
+
+
+===========
+
+\subsection{Questionário}
+\label{sec:questionarioEspecialistas}
+
+Após a execução dos procedimentos por cada voluntário usando o ambiente de simulação para treinamento um questionário foi apresentado para os usuários. Apresentamos a seguir as perguntas que foram apresentadas para os voluntários. As respostas foram coletadas em sua maioria (de um a dez) usando a escala \textit{likert} variando de 1 (Concordo fortemente) até 6 (Discordo fortemente). Esta escala foi feita de forma contrária ao questionário de usabilidade pra fazer uma comparação direta com outro simulador [CITAR AQUI] do qual utilizamos algumas das perguntas feitas na avaliação deste já que os dois simuladores possuem algumas similaridades. A décima primeira questão foi uma tentativa de obter um retorno dos especialistas para melhorar o sistema de pontuação automático da qualidade da execução dos procedimentos.
+
+Questão 1) A apalpação para descoberta do ponto de inserção da agulha traz ganhos no treinamento da sensação háptica?
+
+Questão 2) As opções de posicionamento da paciente (sentada e deitada) atendem as necessidades do treinamento da raquianestesia?
+
+Questão 3) As informações sobre o procedimento no modo tutorial deixam claro como usar o simulador para atingir os objetivos nos procedimentos?
+
+Questão 4) O \textit{feedback} dado para o usuário durante e ao final dos procedimentos via textos explicativos é suficiente para promover uma evolução no treinamento?
+
+Questão 5) Eu pude sentir forças diferentes nos diferentes tecidos virtuais?
+
+Questão 6) O controle dos elementos de interação (dedo para apalpação, seringa e agulha) com o dispositivo háptico foi intuitivo?
+
+Questão 7) A exibição dos pacientes virtuais parecia realista?
+
+Questão 8) Os diferentes ângulos de visualização e transparência ajudaram a compreender a anatomia da região lombar?
+
+Questão 9) Após o uso desta ferramenta num treinamento eu me sentiria mais confiante para realizar anestesia raquidiana do que sem este treinamento?
+
+Questão 10) Considero útil o treinamento neste ambiente?
+
+Questão 11) A pontuação atribuída a cada execução de procedimento inicia de zero e é somado um valor negativo para cada ação executada erradamente ou não executada e somado um valor positivo para cada ação executada corretamente. A seguir a tabela para cada ação. Na sequência coloquei os dados da Tabela~\ref{tab:PontosNotaProcedimento} e informei as seguintes características da pontuação:
+
+A avaliação de desempenho através de pontuação de etapas tem como características:
+\begin{itemize}
+   \item Pontuação máxima = 10
+   \item Pontuação mínima = -9
+   \item Média das notas para desempenho satisfatório = 6
+   \item Número mínimo de procedimentos = 3
+ \end{itemize}
+
+A questão 11 foi finalizada com a seguinte pergunta: Você sugere uma mudança na forma de atribuição da pontuação dando mais ou menos peso para os itens atualmente configurados ou ainda sugere a inclusão de outros itens importantes que contribuam positivamente ou negativamente na pontuação? Em caso positivo comente:
+
+\subsection{Respostas}
+\label{sec:respostasEspecialistas}
+
+Nesta seção apresentamos uma compilação das respostas dos participantes às perguntas do questionário.
+
+Questão 1) 
+
+\subsection{Avaliação dos resultados}
+\label{sec:avaliacaoEspecialistas}
