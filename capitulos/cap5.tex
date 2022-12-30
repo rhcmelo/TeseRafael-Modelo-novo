@@ -172,8 +172,7 @@ confirmam que esse comportamento pode ser simulado adequadamente.
 \section{Testes de usabilidade}
 \label{sec:testeUsabilidade}
 
-Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. 
-============ Esta simplificação foi feita através da   ==========================
+Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. Esta simplificação foi feita através da remoção da \texit{Tag Touchable} do objeto do modelo 3D que representa as vértebras. 
 A ideia com isto foi a de não frustrar os voluntários dos testes mesmo que previamente informando a eles que o desempenho deles em relação a correta execução do procedimento não estava em avaliação. Particularmente esta decisão se demonstrou ter sido acertada uma vez que alguns voluntários mesmo com essa simplificação aparentavam alguma frustração quando tinham dificuldade na execução do procedimento até o final e quando recebiam notas baixas pela sua execução. Importante ressaltar que todos os voluntários foram orientados que não era necessário executar corretamente o procedimento uma vez que eles não possuíam o conhecimento necessário para tal. Todos os testes foram efetuados nas dependências do instituto de computação da Universidade Federal Fluminense com participação de alunos de graduação, mestrado e doutorado.
 
 O ambiente de treinamento simplificado foi apresentado a sessenta e dois voluntários que fizeram uso do equipamento háptico, todos estes voluntários eram estudantes de ciência da computação com idades variando entre 18 e 58 anos sendo cinquenta homens e doze mulheres. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. A montagem do equipamento foi feita conforme ilustrado na Figura~\ref{fig:montagemTesteUsabilidade} e só teve uma pequena variação com alternância do lado do dispositivo háptico quando o voluntário era canhoto.
@@ -185,21 +184,37 @@ O ambiente de treinamento simplificado foi apresentado a sessenta e dois volunt�
     \label{fig:montagemTesteUsabilidade}
 \end{figure}
 
-=================
-Para possibilitar testes comparativos -- critérios mais objetivos, nesta tese focamos nossos experimentos em fazer perguntas com respostas esperadas em vez de questionários para validar as opiniões dos usuários. As respostas indicam se um comportamento específico pode ser mapeado corretamente.
-========================
-
 \subsection{Questionário}
 \label{sec:questionarioUsabilidade}
 
-Após a execução dos procedimentos por cada voluntário usando o ambiente de simulação para treinamento simplificado um questionário foi apresentado para os usuários. As perguntas apresentadas para os voluntários estão descritas a seguir. As respostas foram coletadas em sua maioria (de um a onze) usando a escala \textit{likert} variando de 1 (Discordo fortemente) até 5 (Concordo fortemente). As dez primeiras perguntas foram feitas baseadas no SUS [[[citar aqui]]] para uma avaliação quantitativa da usabilidade. A décima primeira pergunta foi incluída para ter um retorno a respeito do modo tutorial desenvolvido no sistema. A décima segunda questão foi uma pergunta pra resposta textual a respeito de sugestões de possíveis melhorias.
+Após a execução dos procedimentos por cada voluntário usando o ambiente de simulação para treinamento simplificado um questionário foi apresentado para os usuários. As perguntas apresentadas para os voluntários estão descritas a seguir. As respostas foram coletadas em sua maioria (de um a onze) usando a escala \textit{likert} variando de 1 (Discordo fortemente) até 5 (Concordo fortemente). As dez primeiras perguntas foram feitas baseadas no método \textit{\acrfull{SUS}} \cite{Brooke2013} para uma avaliação quantitativa da usabilidade. Ele é um método muito conhecido e utilizado e propõe uma escala numérica para avaliar a: Efetividade (se os usuários conseguem completar seus objetivos); 
+Eficiência (o esforço e recursos que são necessários para completar os objetivos); e
+Satisfação (em relação a experiência do uso do ambiente proposto aqui). A décima primeira pergunta foi incluída para ter um retorno a respeito do modo tutorial desenvolvido no sistema. A décima segunda questão foi uma pergunta pra resposta textual a respeito de sugestões de possíveis melhorias.
 
 \subsection{Respostas}
 \label{sec:respostasUsabilidade}
 
 Nesta seção apresentamos uma compilação das respostas dos participantes às perguntas do questionário.
 
-Questão 1) 
+Questão 1) Eu usaria esse sistema com frequência.
+
+Questão 2) Eu acho o sistema desnecessariamente complexo.
+
+Questão 3) Eu achei o sistema fácil de usar.
+
+Questão 4) Eu acho que precisaria de ajuda de uma pessoa com conhecimentos técnicos para usar o sistema.
+
+Questão 5) Eu acho que as várias funções do sistema estão muito bem integradas.
+
+Questão 6) Eu acho que o sistema apresenta muita inconsistência.
+
+Questão 7) Eu imagino que as pessoas aprenderão como usar esse sistema rapidamente.
+
+Questão 8) Eu achei o sistema atrapalhado de usar.
+
+Questão 9) Eu me senti confiante ao usar o sistema.
+
+Questão 10) Eu precisei aprender várias coisas novas antes de conseguir usar o sistema.
 
 Questão 11) O \textit{feedback} do modo tutorial esclarece dúvidas sobre a sequência de ações a ser executada.
 
@@ -207,6 +222,8 @@ Questão 12) Você tem alguma sugestão de alterações na interface que poderia
 
 \subsection{Avaliação dos resultados}
 \label{sec:avaliacaoUsabilidde}
+
+Em relação as dez perguntas do \acrshort{SUS} o Score calculado a partir das respostas foi 76,9
 
 \section{Avaliações com especialistas}
 \label{sec:testeEspecialistas}
