@@ -2,6 +2,23 @@
 
 Foram feitos testes em três fases distintas do desenvolvimento do ambiente de simulação aqui desenvolvido. 
 Todas como parte do projeto aprovado no comitê de ética do Hospital Universitário Antônio Pedro associado a faculdade de medicina da Universidade Federal Fluminense. Este projeto foi registrado na Plataforma Brasil do ministério da saúde sob o número 23637019.5.0000.5243 (texto no apêndice \ref{apend:comiteEtica}). A primeira fase de testes envolveu avaliações das sensações proporcionadas pelo dispositivo háptico. A segunda e a terceira fase foram feitas em paralelo com todo o ambiente de simulação já desenvolvido. A segunda fase foi um teste de usabilidade e a terceira uma avaliação do ambiente como um todo por especialistas.
+A Tabela~\ref{tab:tabelaCaracteristicasVoluntarios} detalha as características dos voluntários que participaram dos testes em cada fase.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Características dos voluntários dos testes em cada fase.}
+\label{tab:tabelaCaracteristicasVoluntarios}
+\begin{tabular}{|p{0.4\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|}
+\hline
+\textbf{n=84} & \textbf{Fase 1 - Estudantes de computação} & \textbf{Fase 2 - Estudantes de computação} & \textbf{Fase 3 - Médicos anestesistas}\\
+\hline\hline
+Tamanho da população, n & 12 & 62 & 10\\
+Homens, n (\%) & 11 (92\%) & 50 (81\%) &  5 (50\%)\\
+Experiência anterior com RV, n(\%) & 7 (58\%)  & 37 (60\%) & 3 (30\%) \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Simulação das sensações}
 \label{sec:testeSensacoes}
@@ -172,7 +189,7 @@ confirmam que esse comportamento pode ser simulado adequadamente.
 \section{Testes de usabilidade}
 \label{sec:testeUsabilidade}
 
-Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. Esta simplificação foi feita através da remoção da \texit{Tag Touchable} do objeto do modelo 3D que representa as vértebras. 
+Esta seção detalha os testes para avaliação da usabilidade do ambiente de simulação desenvolvido nesta tese. Para isto foi feita uma pequena simplificação no que diz respeito a execução do procedimento de raquianestesia usando o dispositivo háptico. Isto foi feito uma vez que a intenção nesta fase era a de se avaliar a usabilidade por pessoas não especialistas na execução do procedimento de raquianestesia. Com isso a colisão referente aos toques das agulhas nas vértebras dos pacientes simulados foi removida para este teste fazendo que a execução do procedimento pudesse ser feita de forma mais simples e sem necessidade de conhecimento médico de anestesistas. Esta simplificação foi feita através da remoção da \textit{Tag Touchable} do objeto do modelo 3D que representa as vértebras. 
 A ideia com isto foi a de não frustrar os voluntários dos testes mesmo que previamente informando a eles que o desempenho deles em relação a correta execução do procedimento não estava em avaliação. Particularmente esta decisão se demonstrou ter sido acertada uma vez que alguns voluntários mesmo com essa simplificação aparentavam alguma frustração quando tinham dificuldade na execução do procedimento até o final e quando recebiam notas baixas pela sua execução. Importante ressaltar que todos os voluntários foram orientados que não era necessário executar corretamente o procedimento uma vez que eles não possuíam o conhecimento necessário para tal. Todos os testes foram efetuados nas dependências do instituto de computação da Universidade Federal Fluminense com participação de alunos de graduação, mestrado e doutorado.
 
 O ambiente de treinamento simplificado foi apresentado a sessenta e dois voluntários que fizeram uso do equipamento háptico, todos estes voluntários eram estudantes de ciência da computação com idades variando entre 18 e 58 anos sendo cinquenta homens e doze mulheres. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. A montagem do equipamento foi feita conforme ilustrado na Figura~\ref{fig:montagemTesteUsabilidade} e só teve uma pequena variação com alternância do lado do dispositivo háptico quando o voluntário era canhoto.
@@ -224,19 +241,30 @@ Questão 12) Você tem alguma sugestão de alterações na interface que poderia
 \label{sec:avaliacaoUsabilidde}
 
 Em relação as dez perguntas do \acrshort{SUS} a nota calculada a partir das respostas foi 76,9 o que de acordo com \textcite{BangorAaron2009} classifica o ambiente como ``Bom'' numa escalada que vai desde a ``Pior usabilidade imaginável'' pra uma nota a partir de 12,5 com 13,1 de desvio padrão até ``Melhor usabilidade imaginável'' para média 90,9 com 13,4 de desvio padrão. 
-Quanto a avaliação do modo tutorial (questão 11) 69,4\% (43 voluntários) classificaram ele com o valor 4 ou 5 (Concordo fortemente). A distribuição destas respostas pode ser observada no gráfico da Figura~\ref{fig:graficoRespostasModoTutorial}.
+Quanto a avaliação do modo tutorial (questão 11) 69,4\% (43 voluntários) classificaram ele com o valor 4 ou 5 (Concordo fortemente). A distribuição destas respostas pode ser observada na Tabela~\ref{tab:tabelaRespostasModoTutorial}. As melhores sugestões apontadas em resposta a questão 12 foram incluídas na seção \ref{sec:trabFuturo}.
 
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.9\linewidth]{capitulos/figuras/grafico-respostas-modo-tutorial.jpg} 
-    \caption{Gráfico com distribuição das respostas sobre avaliação do modo tutorial.}
-    \label{fig:graficoRespostasModoTutorial}
-\end{figure}
+\begin{table}[!ht]
+\begin{center}
+\caption{Distribuição das respostas da questão 11.}
+\label{tab:tabelaRespostasModoTutorial}
+\begin{tabular}{|p{0.35\linewidth}|p{0.15\linewidth}|p{0.35\linewidth}|}
+\hline
+\textbf{Respostas da questão 11} & \textbf{Frequência} & \textbf{Frequência percentual (\%)}\\
+\hline\hline
+1 & 2 & 3,23\%\\
+2 & 8 & 12,90\%\\
+3 & 9 & 14,52\%\\
+4 & 23 & 37,10\%\\
+5 & 20 & 32,26\%\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Avaliações com especialistas}
 \label{sec:testeEspecialistas}
 
-Esta seção detalha as avaliações do ambiente de treinamento completo desenvolvido nesta tese por especialistas. Para possibilitar uma maior adesão todos os testes com especialistas foram feitos nas dependências do Hospital Universitário Antônio Pedro na secretaria do centro cirúrgico com anuência de todos os responsáveis.
+Esta seção detalha as avaliações do ambiente de treinamento completo desenvolvido nesta tese por especialistas. Para possibilitar uma maior adesão, todos os testes com especialistas foram feitos nas dependências do Hospital Universitário Antônio Pedro, na secretaria do centro cirúrgico, com anuência de todos os responsáveis.
 
 O ambiente de treinamento simplificado foi apresentado a dez voluntários que fizeram uso do equipamento háptico, nove destes voluntários eram anestesistas e um era residente de anestesia com idades variando entre 35 e 54 anos sendo cinco homens e cinco mulheres. Cinco tinham três anos ou menos de experiência em anestesia raquidiana, três tinham por volta de dez anos de experiência e dois deles tinham vinte dois anos com este tipo de anestesia. A frequência mensal de execução deste procedimento entre os voluntários variou entre seis e vinte procedimentos em média. Todos os voluntários concordaram com o termo de consentimento de participação nesta pesquisa e receberam uma breve explicação (cinco minutos) a respeito do procedimento de uso do equipamento háptico e do propósito do sistema. Em seguida usaram o ambiente de treinamento para execução de ao menos um procedimento de raquianestesia. 
 
@@ -248,7 +276,6 @@ O ambiente de treinamento simplificado foi apresentado a dez voluntários que fi
     \caption{Montagem do ambiente de treinamento em uso durante as avaliações com especialistas na posição sugerida inicial.}
     \label{fig:montagemTesteEspecialistasInicial}
 \end{figure}
-
 
 \begin{figure}[ht!]
     \centering
