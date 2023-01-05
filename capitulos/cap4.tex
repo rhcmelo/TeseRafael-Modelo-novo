@@ -1,7 +1,9 @@
-\chapter{Sistema desenvolvido} \label{cap:cap4}
+\chapter{Especificação do Sistema desenvolvido} \label{cap:cap4}
 
-O sistema desenvolvido a partir do uso do dispositivo háptico para treinamento de anestesia raquidiana apresentada nesta tese envolve a criação de um simulador que permite o treinamento de aprendizes na técnica de anestesia raquidiana utilizando um ambiente virtual de treinamento.
-Este ambiente virtual foi desenvolvido utilizando o motor de jogo Unity3D \cite{UnityTechnologies2020} com uso de \textit{plugin} para o dispositivo háptico \textit{Geomagic Touch}®, os \textit{scripts} foram desenvolvidos em C\#. O código foi desenvolvido a partir do simulador epidural desenvolvido por \textcite{Brazil2017thesis} levando em consideração que diversas funcionalidades existentes foram estendidas e modificadas bem como outras foram criadas. O foco passou de anestesia epidural para anestesia raquidiana. Um novo modelo 3D foi construído para representar as camadas do corpo humano, para isto, as formas e volumes das camadas foram baseadas num corpo 3D interativo cientificamente preciso \cite{BioDigitalInc2019}. Adicionalmente, as principais camadas (tecidos do corpo) foram programadas com um margem de crescimento individual onde o crescimento da camada mais interna ``empurra'' as camadas mais externas pra fora. Isto foi feito para possibilitar uma maior diversidade de cenários e para que estes sejam visualmente coerentes quando a transparência das camadas for aplicada. Além da possibilidade de se crescer individualmente cada camada, também é possível que todas as camadas cresçam de forma homogênea através da aplicação de matrizes de transformação. 
+O sistema desenvolvido a partir do uso do dispositivo háptico para treinamento de anestesia raquidiana apresentado nesta tese envolve a criação de um simulador que permite o treinamento de aprendizes na técnica de anestesia raquidiana utilizando um ambiente virtual de treinamento com uso de \acrshort{RV}. Usuários em treinamento recebem \textit{feedback} em relação a execução do procedimento. Foi desenvolvida a modelagem 3D de um tronco de grávida parametrizado de forma a permitir múltiplas variações de cenários de treinamento no que diz respeito as características físicas da paciente. Os experimentos foram executados em três fases com objetivos distintos. A primeira para testar a viabilidade de representação das principais sensações envolvidas neste tipo de anestesia. Nesta fase gráficos de força \textit{versus} deslocamento da agulha foram utilizados para descrever o comportamento durante a perfuração das camadas nos experimentos desta tese. Também foram usados questionários onde procurou-se reduzir a subjetividade da interpretação dos gráficos. Na segunda fase de testes o objetivo foi a avaliação da usabilidade do sistema e para tal foi utilizado o método SUS \cite{Brooke2013}. Na terceira e última fase foram feitos testes com especialistas visando validar a assertividade das representações das sensações em comparação com o procedimento real bem como traçar um comparativo com um simulador com características similares.
+
+O ambiente virtual desta tese foi desenvolvido utilizando o motor de jogo Unity3D \cite{UnityTechnologies2020} com uso de \textit{plugin} para o dispositivo háptico \textit{Geomagic Touch}®, os \textit{scripts} foram desenvolvidos em C\#. O código foi desenvolvido tomando como ponto de partida o simulador epidural desenvolvido por \textcite{Brazil2017thesis}. Diversas funcionalidades existentes foram estendidas e modificadas bem como outras foram criadas ou removidas de acordo com a necessidade. 
+O foco passou de anestesia epidural para anestesia raquidiana. Um novo modelo 3D foi construído para representar as camadas do corpo humano, para isto, as formas e volumes das camadas foram baseadas num corpo 3D interativo cientificamente preciso \cite{BioDigitalInc2019}. Adicionalmente, as principais camadas (tecidos do corpo) foram programadas com um margem de crescimento individual onde o crescimento da camada mais interna ``empurra'' as camadas mais externas pra fora. Isto foi feito para possibilitar uma maior diversidade de cenários e para que estes sejam visualmente coerentes quando a transparência das camadas for aplicada. Além da possibilidade de se crescer individualmente cada camada, também é possível que todas as camadas cresçam de forma homogênea através da aplicação de matrizes de transformação. 
 
 \section {Desenvolvimento do ambiente de treinamento} 
 \label{sec:desenvolvimentoAmbienteTreinamento}
@@ -24,7 +26,7 @@ Como comentado anteriormente foram criados controles para crescimento das princi
 
 Para que seja possível fazer a interação com o dispositivo háptico \textit{Geomagic Touch®} o driver \textit{Open Haptics Touch Device} precisa ser instalado na máquina onde o dispositivo será usado, este driver pode ser encontrado no endereço eletrônico da empresa responsável pela produção e comercialização deste dispositivo háptico \cite{3DSystemsTouch2018}. Para que este dispositivo possa ser utilizado na \textit{Unity} isto foi feito através da instalação do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014}. Este \textit{plugin} contém exemplos que exploram as funcionalidades dos dispositivos hápticos suportados. As características específicas que foram utilizadas nos experimentos são comentadas no Capítulo~\ref{cap:cap5}. No ambiente de treinamento foram utilizadas configurações levando em consideração o retorno dos experimentos ajustadas de acordo com cada corpo de paciente em simulação. 
 
-Foi incluída uma visão lateral (Figura~\ref{fig:posicaoSentadaComTransparencia}) para possibilitar um outro ponto de vista do procedimento (ideia oriunda do \textit{feedback} de um anestesista sobre pontos de melhoria da ferramenta de treinamento). Esta característica ajuda não só o indivíduo em treinamento mas também pessoas que estejam assistindo ao vivo ou ainda gravações deste que venham a ser disponibilizado futuramente. Nesta mesma imagem também é possível observar a demonstração da visibilidade das camadas interiores do corpo (que é exibida ao pressionar com o mouse o botão ``visibilidade'' no menu do lado esquerdo) ou ao pressionar a tecla ``V'' do teclado. Esta funcionalidade pode ser utilizada por iniciantes nos seus primeiros treinamentos assim como por educadores para turmas que estejam assistindo demonstrações feita por estes. Pode-se ler ainda nessa imagem (no alto à direita) as instruções sobre como alternar entre equipamentos, essa alteração pode ser feita a partir de números do teclado ou do segundo botão do dispositivo háptico. Foi considerado aqui como primeiro botão o botão que fica mais perto da ponta da ``caneta'' do dispositivo. Este primeiro botão ao ser pressionado faz com que o líquido da anestesia seja expelido da seringa. As setas para direita e esquerda variam a posição de visualização como se o médico estivesse se deslocando lateralmente na cena. Na parte da esquerda (ligeiramente acima da área do tronco da paciente) e acima dos botões estão os dados da paciente (idade, altura e peso). 
+Foi incluída uma visão lateral (Figura~\ref{fig:posicaoSentadaComTransparencia}) para possibilitar um outro ponto de vista do procedimento (ideia oriunda do \textit{feedback} de um anestesista sobre pontos de melhoria da ferramenta de treinamento). Esta característica ajuda não só o indivíduo em treinamento mas também pessoas que estejam assistindo ao vivo ou ainda gravações deste que venham a ser disponibilizadas futuramente. Nesta mesma imagem também é possível observar a demonstração da visibilidade das camadas interiores do corpo (que é exibida ao pressionar com o mouse o botão ``visibilidade'' no menu do lado esquerdo) ou ao pressionar a tecla ``V'' do teclado. Esta funcionalidade pode ser utilizada por iniciantes nos seus primeiros treinamentos assim como por educadores para turmas que estejam assistindo demonstrações feita por estes. Pode-se ler ainda nessa imagem (no alto à direita) as instruções sobre como alternar entre equipamentos, essa alteração pode ser feita a partir de números do teclado ou do segundo botão do dispositivo háptico. Foi considerado aqui como primeiro botão o botão que fica mais perto da ponta da ``caneta'' do dispositivo. Este primeiro botão ao ser pressionado faz com que o líquido da anestesia seja expelido da seringa. As setas para direita e esquerda variam a posição de visualização como se o médico estivesse se deslocando lateralmente na cena. Na parte da esquerda (ligeiramente acima da área do tronco da paciente) e acima dos botões estão os dados da paciente (idade, altura e peso). 
 
 \begin{figure}[ht!]
     \centering
@@ -162,137 +164,3 @@ A Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral} exibe todas as 
 Para configuração do \textit{Haptic Plug-In For Unity3D} \cite{Poyade2014}, \textit{plugin} utilizado para tratar a interface entre o dispositivo háptico e os itens 3D da simulação, foi necessário adicionar a cada camada do corpo alguns componentes. Os componentes a serem adicionados às camadas são o \textit{Haptic Properties} e o \textit{Mesh Collider} através da seleção da camada na hierarquia e, em seguida, no \textit{Inspector} deve-se ir no item Adicionar componentes e entrar com o nome destes. O componente \textit{Haptic Properties} vem junto com o \textit{Haptic Plug-In For Unity3D}. Ele serve para configurar as propriedades de interação com o háptico aos itens do universo 3D como as camadas do corpo da paciente no nosso caso (pele e demais camadas internas). Um exemplo de propriedade é a \textit{Pop Through} que indica que força é necessário aplicar para que se perfure cada camada que está em contato com a agulha de anestesia durante uma simulação. Existem então configurações distintas para quando o movimento do háptico está representando o movimento do dedo do anestesista para apalpação e descobrimento do local correto de punção e para o momento que o movimento representa os objetos perfurantes como a seringa de anestesia local e a agulha de raquianestesia. No caso do anestesista estar fazendo a apalpação esta propriedade deve assumir um valor que desabilita a perfuração (o valor para este caso é zero). Esta e demais características a respeito das propriedade utilizadas são descritas no Capítulo~\ref{cap:cap5}. Já o componente \textit{Mesh Collider} é nativo do \textit{Unity} e é uma das formas de detecção de colisão da \textit{engine} que usa a geometria visível do objeto para tal. Outra configuração necessária para todos os objetos que têm interação com o háptico é a inclusão da tag \textit{Touchable} que deve ser feita através do \textit{Inspector}. A tag \textit{Touchable} também deve ser incluída em todos os objetos 3D que podem sofrer alguma influência a partir da movimentação do dispositivo háptico.
 
 % === FALAR sobre associações de scripts Haptic Injection, Generic Functions Class?
-
-\section {Etapas do ambiente virtual de treinamento}
-
-Um fluxograma descrevendo as interações entre o usuário e o sistema contemplando todas as funcionalidades pode ser visto na 
-Figura~\ref{fig:fluxogramaAmbiente}.
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.98\linewidth]{capitulos/figuras/fluxograma-ambiente-desenvolvido.jpg} 
-    \caption{Fluxograma descrevendo tudo o que envolve a execução de cada novo procedimento no ambiente desenvolvido. Em branco estão as funcionalidades opcionais, em amarelo as interações que são feitas através de botões do háptico ou do teclado, em verde as interações que possuem retorno de forças do háptico e em vermelho as avaliações e retornos dados pelo sistema ao usuário.}
-    \label{fig:fluxogramaAmbiente}
-\end{figure}
-
-Ao ser iniciado o sistema apresenta ao usuário uma paciente dentre as seis pré-configuradas ilustradas na Figura~\ref{fig:pacientesMaiorParaMenorIMCVisaoTroncoELateral}. Nestas existem pacientes com peso considerado normal, excesso de peso e obesas \cite{MTILLC2019}. O usuário deve então usar o dispositivo háptico para interagir com o ambiente virtual. Ao ser iniciado o sistema e a cada inicio de procedimento em uma nova paciente ao movimentar o dispositivo háptico o item que representa o dedo é movimentado no ambiente virtual de treinamento. O item no ambiente 3D que representa o dedo pode ser observado na Figura~\ref{fig:elementosDeInteracao} (a) do lado direito do tronco da paciente. Outro item a ser observado nesta imagem é uma esfera azul que indica onde foi o último toque do dedo no corpo da paciente. O último ponto tocado foi a estratégia definida para determinação da escolha do ponto de inserção da agulha na simulação. Nas Figuras~\ref{fig:elementosDeInteracao} (b) e (c) estão atrás do tronco da paciente respectivamente a seringa para anestesia local e a agulha usada para aplicação da raquianestesia. No momento da aplicação da raquianestesia uma seringa é conectada no final da agulha como pode ser visto pela visão lateral na Figura~\ref{fig:agulhaRaquiSeringa}.
-
-\begin{figure}[ht!]
-    \centering
-        \begin{tabular}{ccc}
-        \includegraphics[width=0.3\linewidth]{capitulos/figuras/corpo-paciente-apos-apalpacao-dedo.png} & 
-        \includegraphics[width=0.27\linewidth]{capitulos/figuras/corpo-paciente-seringa.png} & 
-        \includegraphics[width=0.27\linewidth]{capitulos/figuras/corpo-paciente-agulha-raqui.png} 
-        \\
-        (a) & (b) & (c)
-        \end{tabular}
-    \caption{Elementos 3D de interação com o ambiente representativos do: (a) Dedo (b) Seringa para anestesia local (c) Agulha de raquianestesia.}
-    \label{fig:elementosDeInteracao}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.4\linewidth]{capitulos/figuras/corpo-visao-lateral-agulhaRaquiSeringa.png} 
-    \caption{Visão lateral do corpo da paciente com aproximação da agulha de raquianestesia com a seringa conectada.}
-    \label{fig:agulhaRaquiSeringa}
-\end{figure}
-
-Cada procedimento no simulador é considerado como sendo finalizado no momento que é aplicada a raquianestesia, ou seja, ao ser pressionado o êmbolo da seringa conectada na agulha, desde que esta esteja dentro do corpo do paciente.
-É necessário completar a execução de ao menos três procedimentos tendo a média acima de seis para que a habilidade do usuário seja considerada como satisfatória. A nota final corresponde a média da nota obtida em todos os procedimentos executados. No casos de não se atingir a média seis nos três primeiros procedimentos será necessário executar tantos procedimentos quanto forem necessários para se chegar a média seis considerando todos os procedimentos executados. Estas características foram inseridas no ambiente de treinamento buscam aumentar a sua efetividade por meio do que é conhecido como a individualização em \textit{serious games} \cite{Sajjadi2022}.
-
-A Tabela~\ref{tab:PontosNotaProcedimento} ilustra a pontuação para formação da nota de cada procedimento. Para cada procedimento a nota inicia em zero. Itens feitos corretamente e na sequência correta tem pontuação positiva e itens feitos de forma incorreta ou não feitos tem pontuação negativa. Para algumas ações não feitas ao invés da pontuação negativa não é aplicada nenhuma penalização uma vez que a não execução correta já acarreta em penalização por não adicionar pontuação positiva na nota. O item que tem mais influência na pontuação é a aplicação na raqui no local correto uma vez que isto é o que determina se a pessoa estará ou não corretamente anestesiada ao final do procedimento.
-
-\begin{table}[!ht]
-\begin{center}
-\caption{Pontos para formarem a nota final de cada procedimento.}
-\label{tab:PontosNotaProcedimento}
-\begin{tabular}{|p{0.8\linewidth}|p{0.1\linewidth}|}
-\hline
-\textbf{Item executado} & \textbf{Ponto}\\
-\hline\hline
-Execução da apalpação para determinação do local de inserção da agulha & +1\\
-%Perfuração do corpo com seringa ou agulha antes da apalpação & -1\\
-Perfuração do corpo com seringa ou agulha antes da apalpação & -1\\
-Anestesia local não aplicada & -1\\
-Anestesia local aplicada com a seringa no local correto & +3\\
-Avanço com a seringa até camadas indevidas (ex. ossos, espaço epidural) & -1\\
-Perfuração do corpo da paciente duas ou três vezes (com seringa ou agulha) & -1\\
-Perfuração do corpo da paciente quatro vezes ou mais (com seringa ou agulha) & -2\\
-Inseriu a agulha de raquianestesia sem antes aplicar a anestesia local & -1\\
-Aplicação da raquianestesia em local diferente do espaço subaracnóide & -3\\
-Aplicação da raquianestesia no espaço subaracnóide & +6\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-São apresentados \textit{feedbacks} para o usuário durante e ao final dos procedimentos executados em cada uma das pacientes. As Figuras \ref{fig:sistemaExecucao1RaquiLocalIncorreto}, \ref{fig:sistemaExecucao2seringaCorreto}, \ref{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocalIncorreto}, \ref{fig:sistemaExecucao4correto} e \ref{fig:sistemaExecucao5semApalpacaoCorreto} mostram uma sequência de possíveis execuções de anestesias ilustrando diferentes erros e acertos durante cada procedimento que são visualizados no \textit{feedback} a direita durante a execução dos procedimentos e na janela de \textit{popup} ao final destes. As Figuras \ref{fig:sistemaExecucao1RaquiLocalIncorreto} e \ref{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocalIncorreto} ilustram execuções de procedimentos onde as execuções foram abaixo da média (nota menores que seis) e portanto consideradas de desempenho não satisfatório. Na Figura \ref{fig:sistemaExecucao1RaquiLocalIncorreto}  nota um (1) foi obtida pois o usuário fez corretamente a apalpação para determinação do ponto de inserção da agulha e fez uma correta aplicação da anestesia local, porém aplicou a raquianestesia no local indevido. Já na Figura \ref{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocalIncorreto} o erro foi ter esquecido de fazer tanto a apalpação pra escolha do ponto de inserção da agulha quanto a aplicação da anestesia local, mas foi aplicada corretamente a raquianestesia o que fez receber cinco como nota final no procedimento. Os outros três procedimentos foram efetuados com resultados acima da média sendo um deles (Figura \ref{fig:sistemaExecucao4correto}) com a nota máxima (dez) por não ter cometido nenhum erro ou esquecimento. No procedimento representado pela Figura \ref{fig:sistemaExecucao5semApalpacaoCorreto} a nota final foi nove pois o único erro foi o de esquecimento da apalpação para determinação do ponto de inserção da agulha. Na Figura \ref{fig:sistemaExecucao2seringaCorreto} os erros de execução no procedimento foram a perfuração do corpo da paciente mais de três vezes com a seringa e avanço desta para camadas indevidas o que fez com que a nota final para este caso fosse sete. 
-Após os cinco procedimentos efetuados, uma vez que três deles tiveram notas acima da média e, a média da nota de todos os cinco procedimentos foi maior que seis (somatório das cinco notas foi de 32) o usuário foi parabenizado pela sua performance e não foi necessário continuar com os treinamentos. Esta sequência de telas ilustra um treinamento usando o simulador desde o seu início até o final. Um vídeo que ilustra toda a execução de um procedimento assim como uma visão geral do ambiente de treinamento desenvolvido nesta tese pode ser visto no link\footnote{\url{https://youtu.be/g9RZRYId9ys}}. Para demonstrar as funcionalidades dos botões laterais incluindo a transparência das camadas e em parte o \textit{feedback} dado durante o procedimento foi gravado um outro vídeo que pode ser visto no link\footnote{\url{https://youtu.be/gGpJKjkVYWU}}.
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-1.png} 
-    \caption{Tela do sistema após finalização de um primeiro procedimento onde a raquianestesia foi aplicada em local incorreto.}
-    \label{fig:sistemaExecucao1RaquiLocalIncorreto}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-2.png} 
-    \caption{Tela do sistema após finalização de um segundo procedimento onde a seringa foi inserida mais de três vezes no corpo da paciente e partes indevidas foram tocadas.}
-    \label{fig:sistemaExecucao2seringaCorreto}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-3.png} 
-    \caption{Tela do sistema após finalização de um terceiro procedimento, onde o usuário não fez a apalpação para escolher o ponto de inserção da agulha e nem aplicou a anestesia local antes de inserção da agulha de raquianestesia.}
-    \label{fig:sistemaExecucao3faltouApalpacaoAnestesiaLocalIncorreto}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-4.png} 
-    \caption{Tela do sistema após finalização de um quarto procedimento em que todo o procedimento foi executado de forma correta.}
-    \label{fig:sistemaExecucao4correto}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistema-exemplo-execucao-procedimento-5.png} 
-    \caption{Tela do sistema após finalização de um quinto procedimento onde só não foi feita a apalpação para determinação do ponto de inserção da agulha.}
-    \label{fig:sistemaExecucao5semApalpacaoCorreto}
-\end{figure}
-
-Foi inserida no sistema uma opção de execução que guia o usuário mais inexperiente nas etapas da raquianestesia que estão disponíveis no ambiente de treinamento desenvolvido. Essa opção foi denominada de tutorial. Ao ser ativada através do botão de nome tutorial na área inferior à esquerda da tela a transparência do corpo da paciente é habilitada e textos explicativos da etapa atual de cada procedimento são exibidos na área superior a esquerda da tela como pode ser visto nas Figuras \ref{fig:sistemaExecucaoTutorialApalpacao}, \ref{fig:sistemaExecucaoTutorialAnestesiaLocal}. Nos textos destas telas na primeira linha é identificado o elemento de interação que está atualmente selecionado no ambiente virtual. O elemento de interação que representa o dedo do médico está selecionado na Figura \ref{fig:sistemaExecucaoTutorialApalpacao}, este sempre está selecionado ao iniciar um novo procedimento. Os demais elementos de interação existentes são a seringa de anestesia local, a agulha de raquianestesia e a agulha de raqui com seringa conectada a ela. Ainda nesta imagem, no modo tutorial é falado sobre a primeira escolha que deve ser feita que é a da posição da paciente e a subsequente apalpação para identificação do ponto de inserção da agulha. 
-A Figura \ref{fig:sistemaExecucaoTutorialAnestesiaLocal} ilustra o texto que é exibido após ter sido feita a escolha do ponto de inserção da agulha. É portando falado sobre qual equipamento deve ser usado para efetuar o próximo passo do procedimento que é a anestesia local. Uma vez feita a anestesia local (no modo tutorial) o usuário é então informado sobre qual é a etapa a ser feita para finalização do procedimento. O sistema também informa com que equipamento e em que camada a raquianestesia deve ser aplicada como pode ser visto na Figura \ref{fig:sistemaExecucaoTutorialRaqui}. Esta imagem ilustra que é possível remover a transparência das camadas (clicando no botão Visibilidade) e ainda continuar recebendo as ajudas do modo tutorial. Isto foi feito de forma ao sistema possibilitar níveis de ajuda distintos dependendo das necessidades do usuário além de tornar o sistema mais autoexplicativo. 
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoTutorialApalpacao.png} 
-    \caption{Tela do sistema no modo tutorial no início do procedimento.}
-    \label{fig:sistemaExecucaoTutorialApalpacao}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoTutorialAnestesiaLocal.png} 
-    \caption{Tela do sistema no modo tutorial após a escolha do ponto de inserção da agulha via apalpação.}
-    \label{fig:sistemaExecucaoTutorialAnestesiaLocal}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoTutorialRaqui.png} 
-    \caption{Tela do sistema no modo tutorial após a anestesia local ter sido efetuada.}
-    \label{fig:sistemaExecucaoTutorialRaqui}
-\end{figure}
-
-Na Figura \ref{fig:sistemaExecucaoVisibilidadeCamadaAtual} é ressaltado na tela do sistema a parte da informação sobre o tecido (camada) do corpo que foi tocada por último pelo elemento de interação (agulha de raquianestesia para esta imagem). Esta informação é exibida sempre que a transparência das camadas está habilitada. Esta informação é útil no treinamento ao possibilitar o reconhecimento das sensações experienciadas ao tocar (e transpassar) cada camada pela agulha de raquianestesia. Isto serve tanto para o treinamento de novos anestesistas inexperientes quanto para a validação destas sensações por anestesistas experientes que é um próximo passo natural na continuação do desenvolvimento deste ambiente de treinamento.
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=\textwidth]{capitulos/figuras/sistemaExecucaoCamadaAtual.png} 
-    \caption{Tela do sistema com transparência ativada com informação da camada atualmente tocada pela agulha marcada em vermelho.}
-    \label{fig:sistemaExecucaoVisibilidadeCamadaAtual}
-\end{figure}
