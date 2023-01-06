@@ -95,7 +95,7 @@ A Tabela \ref{tab:comparacaoSimuladoresPhantoms} resume uma série de caracterí
   \rotatebox{90}{Epidural (E) Raquianestesia (R)} & 
   \rotatebox{90}{Testado por especialistas} & 
   \rotatebox{90}{Permite o uso de ultrassom} & 
-  \rotatebox{90}{Variabilidade de pacientes (quantidade)} & 
+  \rotatebox{90}{Quantidade de pacientes} & 
   \rotatebox{90}{Coluna palpável} & 
   \rotatebox{90}{Escolha do ponto de inserção da agulha }  & 
   \rotatebox{90}{Abordagens mediana (M) e paramediana (P)} \\
@@ -235,28 +235,28 @@ Um resumo das características importantes nos simuladores de anestesias regiona
 %\begin{tabular}{|p{0.27\linewidth}|p{0.55\linewidth}|p{0.105\linewidth}|}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
-  Nome do simulador & 
+  Nome do simulador (referência) & 
   \rotatebox{90}{Ano de desenvolvimento} & 
   \rotatebox{90}{Realidade virtual} & 
   \rotatebox{90}{Epidural (E) Raquianestesia (R)} & 
  \rotatebox{90}{Testado por especialistas} & 
   \rotatebox{90}{Baseado em dados medidos} & 
-  \rotatebox{90}{Variabilidade de pacientes (quantidade, M para múltiplas)} & 
+  \rotatebox{90}{Quantidade de pacientes (M para múltiplos)} & 
   \rotatebox{90}{Feedback para o usuário} & 
   \rotatebox{90}{Coluna palpável} & 
   \rotatebox{90}{Escolha do ponto de inserção da agulha }  & 
   \rotatebox{90}{Abordagens mediana (M) e paramediana (P)} \\
 \hline\hline
- Epidural Sim & 1995 & 3D & E & S & S & M & N & N & S & MP \\
- Epidural Injection Simulator Profile Manager & 2003 (1a versão) & 2D & E & N & N & M & S & S & N & NI\footnote[*]{*Não informado para este trabalho.} \\
- Mediseus® epidural simulator & 2006 & 3D & E & S & N & 2 & N & N & N & MP \\
- Spinal Anaesthesia simulator & 2006 & 3D & ER & N & S & M & S & N & S & MP \\
- EpiSim & 2008 & 3D & E & N & N & M & S & N & N & NI* \\
- Simulador de punção lombar de Färber & 2009 & 3D & ER  & S & S & 3 & S & N & S & MP \\
- Simulador epidural de Dubey & 2013 & 3D & E & N & S & M & N & S & S & MP \\
- Epidural Haptic Game Simulator & 2017 & 3D & E & N & S & M & S & N & S & MP \\
- Simulador epidural de Senac & 2019 & N & E & S & S & 3 & N & N & N & M \\
- USEIT & 2021 & 3D & E & N & N & 1 & S & N & S & MP \\
+ Epidural Sim \cite{Stredney1996} & 1995 & 3D & E & S & S & M & N & N & S & MP \\
+ {\begin{tabular}[c]{@{}c@{}}Epidural Injection Simulator Profile Manager\\ \cite{Wilson2003}\end{tabular}} & 2003 (1a versão) & 2D & E & N & N & M & S & S & N & NI\footnote[*]{*Não informado para este trabalho.} \\
+ {\begin{tabular}[c]{@{}c@{}}Mediseus® epidural simulator\\ \cite{Mayooran2006}\end{tabular}} & 2006 & 3D & E & S & N & 2 & N & N & N & MP \\
+ {\begin{tabular}[c]{@{}c@{}}Spinal Anaesthesia simulator\\ \cite{Albert2007}\end{tabular}} & 2006 & 3D & ER & N & S & M & S & N & S & MP \\
+ EpiSim \cite{YantricInc2011} & 2008 & 3D & E & N & N & M & S & N & N & NI* \\
+ {\begin{tabular}[c]{@{}c@{}}Simulador de punção lombar de Färber\\ \cite{Farber2008}\end{tabular}} & 2009 & 3D & ER  & S & S & 3 & S & N & S & MP \\
+ {\begin{tabular}[c]{@{}c@{}}Simulador epidural de Dubey\\ \cite{N.2013}\end{tabular}} & 2013 & 3D & E & N & S & M & N & S & S & MP \\
+ {\begin{tabular}[c]{@{}c@{}}Epidural Haptic Game Simulator\\ \cite{Brazil2017}\end{tabular}} & 2017 & 3D & E & N & S & M & S & N & S & MP \\
+ {\begin{tabular}[c]{@{}c@{}}Simulador epidural de Senac\\ \cite{Senac2019}\end{tabular}}& 2019 & N & E & S & S & 3 & N & N & N & M \\
+ USEIT \cite{Moo-Young2021} & 2021 & 3D & E & N & N & 1 & S & N & S & MP \\
  Ambiente de simulação desta Tese & 2022 & 3D & R & S & S & M & S & S & S & MP \\
 \hline
 \end{tabular}
@@ -276,4 +276,4 @@ A possibilidade de se fazer infinitas simulações, característica inerente a t
 
 O \textit{feedback} para o usuário é outro ponto muito importante que somente pode ser implementado por simuladores computacionais. Dentre os simuladores estudados várias formas foram utilizadas para essas respostas como: gravações de execuções para estudo posterior \cite{Farber2009, Frazzetto2011}, a descrição do conhecimento obtido assim como a graduação da qualidade da prática \cite{Wilson2003, Albert2007, Dreifaldt2006, Brazil2017, Moo-Young202}. Estas características são fundamentais para uma ferramenta de aprendizado tanto para o aprendiz quanto para o avaliador. O aprendiz se beneficia ao acompanhar o seu aprendizado e pode aumentar sua dedicação em caso de identificação de falhas em algum ponto específico da prática. O avaliador pode usar o retorno da ferramenta para quantificar o nível de habilidade do aprendiz e definir limites antes da prática em pacientes reais. 
 
-No ambiente de treinamento aqui desenvolvido foram configurados diferentes níveis de dificuldade de procedimentos (no mínimo três) que precisam ser feitas com determinado nível de habilidade para que assim seja recebida uma nota geral de zero a dez relativo ao grau de assertividade do aprendiz na prática como um todo. Ele também receberá uma nota indicativa da habilidade demonstrada em cada nível e quais os pontos a melhorar (no caso de erros de procedimento serem identificados). A quantidade de procedimentos necessários de serem executados antes do sistema determinar que o desempenho do aprendiz foi satisfatório o que encerra o treinamento aumenta caso o aprendiz apresente muitos erros nos procedimentos e diminui com os procedimentos sendo feitos da forma correta o que de certa forma tem similaridades com outros simuladores que apresentam graduação da qualidade da prática. O \textit{Epidural Injection Simulator}, (EIS) desenvolvido por \textcite{Wilson2003} apresenta \textit{feedback} em tempo real e possibilita customização das forças e criação de cenários distintos dos inicialmente disponibilizados. O \textit{Spinal Anaesthesia Simulator} \cite{Albert2007,Dreifaldt2006} permite configuração de níveis de dificuldade e retorna para o usuário o nível de aprendizado e habilidades adquiridas em cada nível. O simulador desenvolvido por \textcite{Brazil2017thesis} também permite configuração das forças e atribui penalizações de acordo com os erros cometidos pelo aprendiz fornecendo desta forma um retorno que indica a evolução do aprendiz. No simulador USEIT é descrito como \textit{feedback} a sesanção de \acrshort{LoR} sentida ao pressionar a agulha adaptada ao háptico assim como métricas de avaliação do desempenho que não foram claramente detalhadas \cite{Moo-Young202}. 
+No ambiente de treinamento aqui desenvolvido foram configurados diferentes níveis de dificuldade de procedimentos (no mínimo três) que precisam ser feitas com determinado nível de habilidade para que assim seja recebida uma nota geral de zero a dez relativo ao grau de assertividade do aprendiz na prática como um todo. Ele também receberá uma nota indicativa da habilidade demonstrada em cada nível e quais os pontos a melhorar (no caso de erros de procedimento serem identificados). A quantidade de procedimentos necessários de serem executados antes do sistema determinar que o desempenho do aprendiz foi satisfatório o que encerra o treinamento aumenta caso o aprendiz apresente muitos erros nos procedimentos e diminui com os procedimentos sendo feitos da forma correta o que de certa forma tem similaridades com outros simuladores que apresentam graduação da qualidade da prática. O \textit{Epidural Injection Simulator}, (EIS) desenvolvido por \textcite{Wilson2003} apresenta \textit{feedback} em tempo real e possibilita customização das forças e criação de cenários distintos dos inicialmente disponibilizados. O \textit{Spinal Anaesthesia Simulator} \cite{Albert2007,Dreifaldt2006} permite configuração de níveis de dificuldade e retorna para o usuário o nível de aprendizado e habilidades adquiridas em cada nível. O simulador desenvolvido por \textcite{Brazil2017thesis} também permite configuração das forças e atribui penalizações de acordo com os erros cometidos pelo aprendiz fornecendo desta forma um retorno que indica a evolução do aprendiz. No simulador USEIT é descrito como \textit{feedback} a sesanção de \acrshort{LoR} sentida ao pressionar a agulha adaptada ao háptico assim como métricas de avaliação do desempenho que não foram claramente detalhadas \cite{Moo-Young2021}. 
