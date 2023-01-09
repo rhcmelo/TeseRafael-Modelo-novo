@@ -50,14 +50,14 @@ Uma outra opção de execução do procedimento incluída foi a possibilidade de
 
 Um dos benefícios da criação de ambientes virtuais para treinamento é a possibilidade de se ter uma quantidade muito grande de casos com características diferentes para o treinamento. Estas possibilidades estão limitadas somente pela abrangência do modelo para criação de pacientes virtuais. Conforme descrito anteriormente, para esta tese foi criado e utilizado um modelo dinâmico para geração de pacientes do sexo feminino grávidas. A variação física externamente visível das pacientes é função da altura e massa corpórea. Para as camadas internas envolvidas na anestesia raquidiana a distância da pele até o espaço epidural (\acrshort{DEE}) também deve ser levada em consideração para uma representação mais real da relação entre os dados de massa e altura da paciente com a distância entre estas camadas conforme descrito na Seção \ref{sec:modelagemTecidos}. 
 
-Nesta Seção descreve como foram usados os dados e equações de populações locais descritas por \textcite{Clinkscales2007, Sharma2011, Hazarika2016} para a modelagem de uma equação genérica na determinação da \acrshort{DEE} buscando representar todos os grupos populacionais da Tabela~\ref{tab:PopulacaoPorEstudo}.
-A abordagem usada aqui foi descrita em \textcite{Melo2020}.
+Nesta Seção descreve como foram usados os dados e equações de populações locais descritas por Clinkscales et al. \cite{Clinkscales2007}, Sharma et al. \cite{Sharma2011}, Hazarika et al. \cite{Hazarika2016} para a modelagem de uma equação genérica na determinação da \acrshort{DEE} buscando representar todos os grupos populacionais da Tabela~\ref{tab:PopulacaoPorEstudo}.
+A abordagem usada aqui foi descrita em Melo et al. \cite{Melo2020}.
 
-\textcite{Sharma2011} ao invés das equações apresentaram cinco pontos contendo a \acrshort{DEE} o \acrshort{IMC} representando cada população, optou-se então por utilizar o método dos mínimos quadrados para obter as equações de cada grupo através do melhor ajuste de curva que representasse cada um dos quatro grupos da Tabela~\ref{tab:DEEEstimadosSharma}. Para cada ponto o eixo X representa \acrshort{IMC} e o eixo Y a \acrshort{DEE}. As equações resultantes (que minimizam a soma do quadrado das diferenças para cada ponto) para cada grupo desta tabela estão representadas na Tabela~\ref{tab:DEEEquacoesMinimosQuadrados}. Os nomes dos grupos na tabela estão renomeados para a forma que estes serão referenciados no restante desta tese.
+Sharma et al. \cite{Sharma2011} ao invés das equações apresentaram cinco pontos contendo a \acrshort{DEE} o \acrshort{IMC} representando cada população, optou-se então por utilizar o método dos mínimos quadrados para obter as equações de cada grupo através do melhor ajuste de curva que representasse cada um dos quatro grupos da Tabela~\ref{tab:DEEEstimadosSharma}. Para cada ponto o eixo X representa \acrshort{IMC} e o eixo Y a \acrshort{DEE}. As equações resultantes (que minimizam a soma do quadrado das diferenças para cada ponto) para cada grupo desta tabela estão representadas na Tabela~\ref{tab:DEEEquacoesMinimosQuadrados}. Os nomes dos grupos na tabela estão renomeados para a forma que estes serão referenciados no restante desta tese.
 
 \begin{table}[!ht]
 \begin{center}
-\caption{Equações resultantes do uso do métodos dos mínimos quadrados nos dados de \textcite{Sharma2011}.}
+\caption{Equações resultantes do uso do métodos dos mínimos quadrados nos dados de Sharma et al. \cite{Sharma2011}.}
 \label{tab:DEEEquacoesMinimosQuadrados}
 \begin{tabular}{|p{0.4\linewidth}|p{0.4\linewidth}|}
 \hline
